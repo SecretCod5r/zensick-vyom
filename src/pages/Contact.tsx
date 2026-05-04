@@ -21,7 +21,7 @@ export default function Contact() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
@@ -33,23 +33,52 @@ export default function Contact() {
     const interest = formData.get("interest") as string;
     const message = formData.get("message") as string;
 
-    const whatsappNumber = "918130592339";
+    // The user will need to replace this with their actual key or set it in Vercel
+    const accessKey = "YOUR_WEB3FORMS_ACCESS_KEY";
     
-    const rawText = `*New Lead from Website*\n\n*Name:* ${name}\n*Email:* ${email}\n*Company:* ${company}\n*Budget:* ${budget}\n*Interest:* ${interest}\n*Message:* ${message}`;
-    const encodedText = encodeURIComponent(rawText);
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: accessKey,
+          name,
+          email,
+          company,
+          budget,
+          interest,
+          message,
+          subject: `New Lead from Website: ${name}`,
+          from_name: "Zensick Website",
+        }),
+      });
 
-    const newWindow = window.open(whatsappUrl, "_blank");
-    if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
-      window.location.href = whatsappUrl;
+      const result = await response.json();
+      
+      if (result.success) {
+        toast({
+          title: "Message sent!",
+          description: "We've received your details and will get back to you soon.",
+        });
+        (e.target as HTMLFormElement).reset();
+      } else {
+        toast({
+          title: "Something went wrong",
+          description: result.message || "Failed to send message. Please try again.",
+          variant: "destructive"
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Network error",
+        description: "Please check your connection and try again.",
+        variant: "destructive"
+      });
     }
 
-    toast({
-      title: "Redirecting to WhatsApp...",
-      description: "Opening chat to send your details."
-    });
-    
-    (e.target as HTMLFormElement).reset();
     setIsSubmitting(false);
   };
 
