@@ -1,0 +1,441 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* ZENSICK Brand — Dark editorial with red #e8341a accent */
+    --background: 230 20% 7%; /* #0d0f1e deep navy */
+    --foreground: 0 0% 98%;
+
+    --card: 230 15% 9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 230 15% 9%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Primary — Red #e8341a */
+    --primary: 8 83% 51%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary — Darker Red */
+    --secondary: 8 70% 38%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Accent — Same Red */
+    --accent: 8 83% 51%;
+    --accent-foreground: 0 0% 100%;
+
+    --muted: 230 15% 12%;
+    --muted-foreground: 230 10% 55%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 230 15% 12%;
+    --input: 230 15% 15%;
+    --ring: 8 83% 51%;
+
+    --radius: 0.75rem;
+
+    /* Brand Glow Variables */
+    --glow-primary: 0 0 80px hsl(8 83% 51% / 0.3);
+    --glow-accent: 0 0 100px hsl(8 83% 51% / 0.2);
+    --glow-secondary: 0 0 80px hsl(8 70% 38% / 0.2);
+    
+    --gradient-primary: linear-gradient(135deg, hsl(8 83% 51%) 0%, hsl(8 70% 38%) 100%);
+    --gradient-text: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(8 83% 60%) 100%);
+    --gradient-button: linear-gradient(135deg, hsl(8 83% 51%) 0%, hsl(8 83% 42%) 100%);
+    --gradient-hero: radial-gradient(ellipse 80% 60% at 50% -20%, hsl(8 83% 51% / 0.15), transparent);
+    --gradient-card: linear-gradient(135deg, hsl(230 15% 10%) 0%, hsl(230 15% 7%) 100%);
+
+    /* Sidebar */
+    --sidebar-background: 230 20% 7%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 8 83% 51%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 230 20% 10%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 230 15% 15%;
+    --sidebar-ring: 8 83% 51%;
+  }
+
+  .dark {
+    --background: 230 20% 7%;
+    --foreground: 0 0% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Outfit', system-ui, sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Syne', 'Space Grotesk', system-ui, sans-serif;
+    @apply font-bold tracking-tight;
+  }
+
+  .font-display {
+    font-family: 'Syne', 'Space Grotesk', system-ui, sans-serif;
+  }
+
+  .font-body {
+    font-family: 'Outfit', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  /* Red accent text — replaces gradient text */
+  .text-gradient {
+    color: hsl(8 83% 51%);
+  }
+
+  .text-gradient-vibrant {
+    color: hsl(8 83% 51%);
+  }
+
+  .text-gradient-blue {
+    color: hsl(8 83% 51%);
+  }
+
+  .text-gradient-primary {
+    color: hsl(8 83% 51%);
+  }
+
+  /* Glow Effects */
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+
+  .glow-accent {
+    box-shadow: var(--glow-accent);
+  }
+
+  .glow-secondary {
+    box-shadow: var(--glow-secondary);
+  }
+
+  .glow-multi {
+    box-shadow: 
+      0 0 40px hsl(8 83% 51% / 0.2),
+      0 0 80px hsl(8 83% 51% / 0.1);
+  }
+
+  /* Glass Effect */
+  .glass {
+    @apply backdrop-blur-xl rounded-xl;
+    background: hsl(230 15% 10% / 0.85);
+    border: 1px solid hsl(230 15% 20% / 0.4);
+  }
+
+  .glass-card {
+    @apply backdrop-blur-xl rounded-2xl relative overflow-hidden;
+    background: linear-gradient(135deg, hsl(230 15% 10% / 0.95) 0%, hsl(230 15% 7% / 0.98) 100%);
+    border: 1px solid hsl(230 15% 15% / 0.5);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glass-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, hsl(8 83% 51% / 0.03) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .glass-card:hover {
+    border-color: hsl(8 83% 51% / 0.3);
+    box-shadow: 
+      0 0 40px hsl(8 83% 51% / 0.1),
+      0 8px 32px hsl(0 0% 0% / 0.4);
+    transform: translateY(-4px);
+  }
+
+  .glass-card:hover::before {
+    opacity: 1;
+  }
+
+  /* Feature Card */
+  .feature-card {
+    @apply rounded-2xl relative overflow-hidden;
+    background: linear-gradient(135deg, hsl(8 83% 51% / 0.05) 0%, hsl(230 15% 8%) 100%);
+    border: 1px solid hsl(8 83% 51% / 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .feature-card:hover {
+    border-color: hsl(8 83% 51% / 0.3);
+    box-shadow: 0 0 60px hsl(8 83% 51% / 0.15);
+  }
+
+  /* Stat card styling */
+  .stat-card {
+    @apply glass-card p-6 relative overflow-hidden;
+  }
+
+  .stat-card::after {
+    content: '';
+    @apply absolute top-0 left-0 w-full h-1;
+    background: hsl(8 83% 51%);
+  }
+
+  /* Icon Box — Dark with red accent */
+  .icon-box {
+    @apply rounded-xl flex items-center justify-center;
+    background: hsl(230 15% 10%);
+    border: 1px solid hsl(8 83% 51% / 0.3);
+  }
+
+  .icon-box-blue {
+    @apply rounded-xl flex items-center justify-center;
+    background: hsl(230 15% 10%);
+    border: 1px solid hsl(8 83% 51% / 0.3);
+  }
+
+  /* Animated underline for links */
+  .link-underline {
+    @apply relative;
+  }
+  
+  .link-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300;
+    background: hsl(8 83% 51%);
+  }
+  
+  .link-underline:hover::after {
+    @apply w-full;
+  }
+
+  /* Button glow animation */
+  .btn-glow {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-glow::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: hsl(8 83% 51%);
+    background-size: 300% 300%;
+    border-radius: inherit;
+    z-index: -1;
+    animation: gradient-shift 4s ease-in-out infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .btn-glow:hover::before {
+    opacity: 1;
+  }
+
+  /* Shimmer effect */
+  .btn-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-shimmer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      hsl(0 0% 100% / 0.2) 50%,
+      transparent 100%
+    );
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  /* Pill/Badge */
+  .pill {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium;
+    background: hsl(230 15% 10% / 0.8);
+    border: 1px solid hsl(8 83% 51% / 0.2);
+    backdrop-filter: blur(8px);
+  }
+
+  .pill-gradient {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium;
+    background: hsl(8 83% 51% / 0.08);
+    border: 1px solid hsl(8 83% 51% / 0.25);
+    backdrop-filter: blur(8px);
+  }
+
+  /* Grid Pattern */
+  .bg-grid {
+    background-image: 
+      linear-gradient(hsl(0 0% 100% / 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(0 0% 100% / 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  /* Dot Pattern */
+  .bg-dots {
+    background-image: radial-gradient(hsl(0 0% 100% / 0.1) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  /* Section divider */
+  .section-divider {
+    @apply w-full h-px;
+    background: linear-gradient(90deg, transparent, hsl(8 83% 51% / 0.2), transparent);
+  }
+}
+
+@layer utilities {
+  /* Hover lift effect */
+  .hover-lift {
+    @apply transition-all duration-400;
+  }
+  
+  .hover-lift:hover {
+    @apply -translate-y-3;
+    box-shadow: 
+      0 24px 80px -20px hsl(8 83% 51% / 0.2),
+      0 12px 40px -10px hsl(0 0% 0% / 0.5);
+  }
+
+  /* Duration utilities */
+  .duration-400 {
+    transition-duration: 400ms;
+  }
+
+  /* Stagger delays */
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+  .delay-600 { animation-delay: 600ms; }
+
+  /* Text shadow glow */
+  .text-glow {
+    text-shadow: 0 0 40px hsl(8 83% 51% / 0.4);
+  }
+
+  .text-glow-sm {
+    text-shadow: 0 0 20px hsl(8 83% 51% / 0.3);
+  }
+
+  /* Interactive focus ring for inputs */
+  .focus-glow:focus {
+    box-shadow: 0 0 0 3px hsl(8 83% 51% / 0.15), 0 0 20px hsl(8 83% 51% / 0.1);
+  }
+
+  /* Magnetic hover */
+  .hover-magnetic {
+    @apply transition-transform duration-300;
+  }
+  .hover-magnetic:hover {
+    transform: scale(1.02) translateY(-2px);
+  }
+
+  /* Border glow on hover */
+  .hover-border-glow {
+    @apply transition-all duration-300;
+  }
+  .hover-border-glow:hover {
+    border-color: hsl(8 83% 51% / 0.4);
+    box-shadow: 0 0 30px hsl(8 83% 51% / 0.15);
+  }
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  50% { left: 100%; }
+  100% { left: 100%; }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { 
+    box-shadow: 0 0 20px hsl(8 83% 51% / 0.3); 
+  }
+  50% { 
+    box-shadow: 0 0 60px hsl(8 83% 51% / 0.5); 
+  }
+}
+
+@keyframes orbit {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Animation classes */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-orbit {
+  animation: orbit 20s linear infinite;
+}
+
+/* Custom scrollbar — red dot */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(8 83% 51%);
+  border-radius: 50%;
+  border: 2px solid hsl(230 20% 7%);
+  background-clip: padding-box;
+  min-height: 10px;
+  max-height: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(8 83% 55%);
+  border: 2px solid hsl(230 20% 7%);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(8 83% 51%) transparent;
+}
+
+/* Selection styling */
+::selection {
+  background: hsl(8 83% 51% / 0.4);
+  color: hsl(0 0% 100%);
+}
