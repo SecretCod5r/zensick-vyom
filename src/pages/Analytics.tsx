@@ -99,6 +99,7 @@ export default function Analytics() {
               <motion.div
                 animate={{ rotate: [0, 360] }}
                 transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                style={{ willChange: "transform" }}
               >
                 <BarChart3 className="w-4 h-4 text-primary" />
               </motion.div>
@@ -266,16 +267,19 @@ export default function Analytics() {
                     className="w-3 h-3 rounded-full bg-destructive/50"
                     animate={{ scale: [1, 1.2, 1] }}
                     transition={{ duration: 2, repeat: Infinity, delay: 0 }}
+                    style={{ willChange: "transform" }}
                   />
                   <motion.div 
                     className="w-3 h-3 rounded-full bg-accent/50"
                     animate={{ scale: [1, 1.2, 1] }}
                     transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
+                    style={{ willChange: "transform" }}
                   />
                   <motion.div 
                     className="w-3 h-3 rounded-full bg-primary/50"
                     animate={{ scale: [1, 1.2, 1] }}
                     transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
+                    style={{ willChange: "transform" }}
                   />
                 </div>
                 <div className="pt-8 space-y-5">
@@ -454,6 +458,7 @@ export default function Analytics() {
                 className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/5"
                 animate={{ opacity: [0.3, 0.6, 0.3] }}
                 transition={{ duration: 4, repeat: Infinity }}
+                style={{ willChange: "opacity" }}
               />
               <div className="relative z-10">
                 <motion.h2 
