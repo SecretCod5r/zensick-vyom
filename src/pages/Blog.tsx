@@ -117,9 +117,16 @@ function BlogCard({ post, index }: {post: typeof blogPosts[0];index: number;}) {
 
 }
 
+import { SEO } from "@/components/seo/SEO";
+
 export default function Blog() {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="D2C Growth Blog | Performance Marketing Insights" 
+        description="Read the latest insights on D2C growth, Meta ads strategy, Shopify optimization, and data-driven performance marketing from ZENSICK."
+        canonicalUrl="https://zensick.com/blog"
+      />
       <Navbar />
       
       <main className="pt-32 pb-20">

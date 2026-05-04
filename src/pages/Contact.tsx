@@ -1,3 +1,4 @@
+import { SEO } from "@/components/seo/SEO";
 import { useState } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -84,6 +85,11 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Contact Us | Book a Free Audit" 
+        description="Ready to scale your D2C brand? Contact ZENSICK for a free performance audit. Let's discuss your Meta ads, Shopify store, and growth strategy."
+        canonicalUrl="https://zensick.com/contact"
+      />
       <Navbar />
       <main className="pt-24">
         {/* Hero */}

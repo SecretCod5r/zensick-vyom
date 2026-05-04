@@ -109,9 +109,16 @@ const tools: { name: string; category: string; icon: LucideIcon }[] = [
 { name: "Shopify", category: "E-Commerce", icon: ShoppingBag }];
 
 
+import { SEO } from "@/components/seo/SEO";
+
 export default function Services() {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Services | Meta Ads & Shopify Development" 
+        description="We build data-driven D2C growth engines. Full-stack Shopify development, Meta ads scaling, and advanced GA4 analytics."
+        canonicalUrl="https://zensick.com/services"
+      />
       <Navbar />
       <main className="pt-24">
         {/* Hero */}

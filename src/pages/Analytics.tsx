@@ -76,9 +76,16 @@ function DashboardPie({ title, data }: { title: string; data: { name: string; va
   );
 }
 
+import { SEO } from "@/components/seo/SEO";
+
 export default function Analytics() {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Analytics & Tracking | GA4 & Meta Pixel Setup" 
+        description="Stop guessing. We set up advanced GA4 architecture, Meta Pixel with CAPI, and Looker Studio dashboards for perfect attribution."
+        canonicalUrl="https://zensick.com/analytics"
+      />
       <Navbar />
       <main className="pt-24">
         {/* Hero with Beams Background */}

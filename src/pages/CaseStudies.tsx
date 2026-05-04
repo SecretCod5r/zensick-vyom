@@ -11,6 +11,28 @@ import { ZoomParallaxSection } from "@/components/casestudies/ZoomParallaxSectio
 import { PulseBeamsConnector } from "@/components/home/PulseBeamsConnector";
 const caseStudies = [
   {
+    title: "TANISH CREATION",
+    category: "Legacy Business → Digital Transition",
+    subtitle: "Textile Manufacturing (60+ years) · Offline-to-Online",
+    context: "A 60-year textile business entering online for the first time. Primary goal: bulk enquiries. Secondary: retail sales.",
+    challenge: "No digital positioning. No bulk-focused landing structure. No tracking infrastructure. No B2B clarity. No event optimization. Running ads immediately would waste spend.",
+    approach: [
+      "Homepage restructure — Retail vs Bulk split, trust strip, reviews + FAQ, clear CTA hierarchy",
+      "Bulk landing page — 500m minimum positioning, WhatsApp-focused conversion, production clarity",
+      "Tracking setup — Meta Business Manager, Pixel + CAPI, GA4 property, lead-focused strategy",
+      "Instagram setup — structured content plan, bulk-first messaging",
+      "Ad campaign: ₹1,200 spent, 200 inquiries, ₹5.61 per conversation",
+    ],
+    results: {
+      presence: { before: "None", after: "Fully structured" },
+      funnel: { before: "No funnel", after: "Lead-optimized" },
+      foundation: { before: "0%", after: "100% complete, campaign live" },
+      results: { before: "0", after: "₹20 lakh bulk order + FirstCry India partnership secured" },
+    },
+    insight: "Before driving traffic, we built a system that could capture and measure bulk intent. The results followed before we even scaled spend.",
+    gradient: "from-red-600 to-red-800",
+  },
+  {
     title: "VYRE",
     category: "E-commerce Foundation & Growth Architecture",
     subtitle: "Gen Z Streetwear · Pre-Scale D2C",
@@ -51,28 +73,6 @@ const caseStudies = [
     gradient: "from-red-500 to-red-600",
   },
   {
-    title: "TANISH CREATION",
-    category: "Legacy Business → Digital Transition",
-    subtitle: "Textile Manufacturing (60+ years) · Offline-to-Online",
-    context: "A 60-year textile business entering online for the first time. Primary goal: bulk enquiries. Secondary: retail sales.",
-    challenge: "No digital positioning. No bulk-focused landing structure. No tracking infrastructure. No B2B clarity. No event optimization. Running ads immediately would waste spend.",
-    approach: [
-      "Homepage restructure — Retail vs Bulk split, trust strip, reviews + FAQ, clear CTA hierarchy",
-      "Bulk landing page — 500m minimum positioning, WhatsApp-focused conversion, production clarity",
-      "Tracking setup — Meta Business Manager, Pixel + CAPI, GA4 property, lead-focused strategy",
-      "Instagram setup — structured content plan, bulk-first messaging",
-      "Ad campaign: ₹1,200 spent, 200 inquiries, ₹5.61 per conversation",
-    ],
-    results: {
-      presence: { before: "None", after: "Fully structured" },
-      funnel: { before: "No funnel", after: "Lead-optimized" },
-      foundation: { before: "0%", after: "100% complete, campaign live" },
-      results: { before: "0", after: "₹20 lakh bulk order + FirstCry India partnership secured" },
-    },
-    insight: "Before driving traffic, we built a system that could capture and measure bulk intent. The results followed before we even scaled spend.",
-    gradient: "from-red-600 to-red-800",
-  },
-  {
     title: "TORAL",
     category: "Conversion & Brand Foundation",
     subtitle: "Affordable Women's Handbags · Offline Reseller → D2C",
@@ -94,9 +94,16 @@ const caseStudies = [
   },
 ];
 
+import { SEO } from "@/components/seo/SEO";
+
 export default function CaseStudies() {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="D2C Case Studies & Marketing Results" 
+        description="See how we've helped D2C brands scale from scratch, restructure their analytics, and achieve measurable ROAS. Real problems, real results."
+        canonicalUrl="https://zensick.com/case-studies"
+      />
       <Navbar />
       <main className="pt-24">
         {/* Hero */}

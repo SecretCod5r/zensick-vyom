@@ -241,6 +241,8 @@ function BlogContent({ content }: { content: string }) {
   return <div className="space-y-2">{elements}</div>;
 }
 
+import { SEO } from "@/components/seo/SEO";
+
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
   const post = slug ? blogPostsContent[slug as keyof typeof blogPostsContent] : null;
@@ -253,6 +255,12 @@ export default function BlogPost() {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title={`${post.title}`}
+        description={post.excerpt}
+        canonicalUrl={`https://zensick.com/blog/${slug}`}
+        ogType="article"
+      />
       <Navbar />
       
       <main className="pt-32 pb-20">

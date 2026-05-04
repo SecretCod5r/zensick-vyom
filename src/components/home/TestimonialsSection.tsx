@@ -7,6 +7,12 @@ import starrvaultLogo from "@/assets/starrvault-logo.png";
 import tanishLogo from "@/assets/tanish-creation-logo.png";
 
 const testimonials = [{
+  id: 3,
+  testimonial: "We've been in textiles for 60 years. ZENSICK built us a proper digital presence in weeks and we got an order worth 20 lakhs within only 2 weeks of running ads.",
+  author: "Tanish Creation",
+  role: "Textile & Fashion Brand",
+  avatarUrl: tanishLogo
+}, {
   id: 1,
   testimonial: "ZENSICK transformed our analytics approach. We went from guessing to knowing exactly what drives our revenue.",
   author: "Keshav Bhagat",
@@ -18,12 +24,6 @@ const testimonials = [{
   author: "Team STARRVAULT",
   role: "SaaS Productivity Platform",
   avatarUrl: starrvaultLogo
-}, {
-  id: 3,
-  testimonial: "We've been in textiles for 60 years. ZENSICK built us a proper digital presence in weeks and we got an order worth 20 lakhs within only 2 weeks of running ads.",
-  author: "Tanish Creation",
-  role: "Textile & Fashion Brand",
-  avatarUrl: tanishLogo
 }];
 
 export function TestimonialsSection() {

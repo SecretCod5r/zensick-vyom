@@ -39,9 +39,16 @@ const stats = [
   { value: "∞", label: "Growth Potential" },
 ];
 
+import { SEO } from "@/components/seo/SEO";
+
 export default function About() {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="About Us | D2C Performance Agency in Delhi" 
+        description="Learn about ZENSICK, the performance marketing agency in Delhi. We focus on transparent tracking, data-driven decisions, and sustainable D2C growth."
+        canonicalUrl="https://zensick.com/about"
+      />
       <Navbar />
       <main className="pt-24">
         {/* Hero Section */}
