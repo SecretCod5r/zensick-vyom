@@ -20,7 +20,7 @@ const testimonials = [{
   avatarUrl: starrvaultLogo
 }, {
   id: 3,
-  testimonial: "ZENSICK took our legacy textile brand digital with real conversion logic, not just traffic. The results speak for themselves.",
+  testimonial: "We've been in textiles for 60 years. ZENSICK built us a proper digital presence in weeks and we got an order worth 20 lakhs within only 2 weeks of running ads.",
   author: "Tanish Creation",
   role: "Textile & Fashion Brand",
   avatarUrl: tanishLogo
