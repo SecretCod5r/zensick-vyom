@@ -34,7 +34,7 @@ export default function Contact() {
     const message = formData.get("message") as string;
 
     // The user will need to replace this with their actual key or set it in Vercel
-    const accessKey = "YOUR_WEB3FORMS_ACCESS_KEY";
+    const accessKey = "9160f82e-3e87-4a3e-b772-9b58d84d5321";
     
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
