@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { supabase } from "@/integrations/supabase/client";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
@@ -22,34 +21,35 @@ export default function Contact() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     const formData = new FormData(e.currentTarget);
-    const { error } = await supabase.from("contact_submissions").insert({
-      name: formData.get("name") as string,
-      email: formData.get("email") as string,
-      company: formData.get("company") as string || null,
-      budget: formData.get("budget") as string || null,
-      interest: formData.get("interest") as string,
-      message: formData.get("message") as string
-    });
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const company = formData.get("company") as string || "N/A";
+    const budget = formData.get("budget") as string || "N/A";
+    const interest = formData.get("interest") as string;
+    const message = formData.get("message") as string;
 
-    if (error) {
-      toast({
-        title: "Something went wrong",
-        description: "Please try again or reach out via WhatsApp.",
-        variant: "destructive"
-      });
-    } else {
-      toast({
-        title: "Message sent!",
-        description: "We'll get back to you within 24 hours."
-      });
-      (e.target as HTMLFormElement).reset();
+    const whatsappNumber = "918130592339";
+    
+    const rawText = `*New Lead from Website*\n\n*Name:* ${name}\n*Email:* ${email}\n*Company:* ${company}\n*Budget:* ${budget}\n*Interest:* ${interest}\n*Message:* ${message}`;
+    const encodedText = encodeURIComponent(rawText);
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
+
+    const newWindow = window.open(whatsappUrl, "_blank");
+    if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
+      window.location.href = whatsappUrl;
     }
 
+    toast({
+      title: "Redirecting to WhatsApp...",
+      description: "Opening chat to send your details."
+    });
+    
+    (e.target as HTMLFormElement).reset();
     setIsSubmitting(false);
   };
 
