@@ -61,13 +61,15 @@ const caseStudies = [
       "Bulk landing page — 500m minimum positioning, WhatsApp-focused conversion, production clarity",
       "Tracking setup — Meta Business Manager, Pixel + CAPI, GA4 property, lead-focused strategy",
       "Instagram setup — structured content plan, bulk-first messaging",
+      "Ad campaign: ₹1,200 spent, 200 inquiries, ₹5.61 per conversation",
     ],
     results: {
       presence: { before: "None", after: "Fully structured" },
       funnel: { before: "No funnel", after: "Lead-optimized" },
-      foundation: { before: "0%", after: "90% complete" },
+      foundation: { before: "0%", after: "100% complete, campaign live" },
+      results: { before: "0", after: "₹20 lakh bulk order + FirstCry India partnership secured" },
     },
-    insight: "Before driving traffic, we built a system that could capture and measure bulk intent.",
+    insight: "Before driving traffic, we built a system that could capture and measure bulk intent. The results followed before we even scaled spend.",
     gradient: "from-red-600 to-red-800",
   },
   {
