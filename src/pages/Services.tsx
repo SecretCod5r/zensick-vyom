@@ -53,6 +53,9 @@ const services: ServiceSection[] = [
     description: "Scale revenue through data-driven paid acquisition across digital platforms while continuously optimizing every campaign for measurable ROI.",
     includes: [
       "Meta Ads",
+      "Google Ads",
+      "LinkedIn Ads",
+      "YouTube Ads",
       "Lead Generation",
       "Ecommerce Advertising",
       "Marketplace Management",

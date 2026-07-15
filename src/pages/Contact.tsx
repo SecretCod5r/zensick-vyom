@@ -87,8 +87,8 @@ export default function Contact() {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Contact Us | Book a Free Audit" 
-        description="Ready to scale your D2C brand? Contact ZENSICK for a free performance audit. Let's discuss your Meta ads, Shopify store, and growth strategy."
-        canonicalUrl="https://zensick.com/contact"
+        description="Ready to scale your brand? Contact ZENSICK for a free growth audit. Let's discuss your marketing strategy, analytics, and digital growth roadmap."
+        canonicalUrl="https://www.zensick.com/contact"
       />
       <Navbar />
       <main className="pt-24">
@@ -334,10 +334,13 @@ export default function Contact() {
 
                           <option value="">Select an option</option>
                           <option value="audit">Free Audit</option>
+                          <option value="strategy">Marketing Strategy</option>
+                          <option value="creative">Creative + Content</option>
                           <option value="performance">Performance Marketing</option>
-                          <option value="analytics">Analytics & Reporting</option>
-                          <option value="creative">Creative Strategy</option>
-                          <option value="full">Full Service</option>
+                          <option value="crm">CRM & Retention</option>
+                          <option value="analytics">Analytics & Intelligence</option>
+                          <option value="web">Web Development & SEO</option>
+                          <option value="full">Full Service (360° Growth)</option>
                           <option value="other">Other</option>
                         </select>
                       </div>

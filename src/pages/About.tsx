@@ -41,13 +41,22 @@ const stats = [
 
 import { SEO } from "@/components/seo/SEO";
 
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About ZENSICK",
+  "url": "https://www.zensick.com/about",
+  "description": "Learn about ZENSICK, the strategy-first digital growth company in Delhi."
+};
+
 export default function About() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="About Us | D2C Performance Agency in Delhi" 
-        description="Learn about ZENSICK, the performance marketing agency in Delhi. We focus on transparent tracking, data-driven decisions, and sustainable D2C growth."
-        canonicalUrl="https://zensick.com/about"
+        title="About Us | Digital Growth Company in Delhi" 
+        description="Learn about ZENSICK, the strategy-first digital growth company in Delhi. We focus on transparent tracking, data-driven decisions, and sustainable growth."
+        canonicalUrl="https://www.zensick.com/about"
+        schema={schema}
       />
       <Navbar />
       <main className="pt-24">
@@ -76,7 +85,7 @@ export default function About() {
                 transition={{ delay: 0.2 }}
               >
                 We're Not Your Typical{" "}
-                <span className="text-gradient-primary">Agency</span>
+                <span className="text-gradient-primary">Company</span>
               </motion.h1>
               
               <motion.p 
@@ -86,7 +95,7 @@ export default function About() {
                 transition={{ delay: 0.3 }}
               >
                 We started ZENSICK because we got tired of the BS. Vanity metrics. 
-                Black-box reporting. Agencies that hide behind complexity.
+                Black-box reporting. Companies that hide behind complexity.
               </motion.p>
             </div>
           </div>
@@ -119,7 +128,7 @@ export default function About() {
                 </h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    Most marketing agencies operate on information asymmetry. They know 
+                    Most marketing companies operate on information asymmetry. They know 
                     things you don't, and they keep it that way. It's good for their business, 
                     bad for yours.
                   </p>
@@ -134,7 +143,7 @@ export default function About() {
                     a team that's obsessed with teaching you what we see, not hiding it.
                   </p>
                   <p className="text-foreground font-medium">
-                    We're young. We're hungry. And we're building the agency we wish existed 
+                    We're young. We're hungry. And we're building the company we wish existed 
                     when we were on the brand side.
                   </p>
                 </div>
@@ -167,7 +176,7 @@ export default function About() {
                           <img src={zensickEmblem} alt="ZENSICK" className="w-24 h-24 rounded-full object-cover" />
                         </div>
                         <h3 className="font-display text-2xl font-bold mb-2">ZENSICK</h3>
-                        <p className="text-muted-foreground">Performance Marketing & Analytics</p>
+                        <p className="text-muted-foreground">Strategy & Digital Growth</p>
                       </div>
                       
                       <div className="grid grid-cols-2 gap-4">
@@ -311,7 +320,7 @@ export default function About() {
                 transition={{ duration: 0.6 }}
               >
                 <p className="text-foreground font-semibold text-lg">
-                  ZENSICK started because marketing agencies have a weird talent:
+                  ZENSICK started because marketing companies have a weird talent:
                 </p>
                 <p className="text-foreground font-medium text-xl italic">
                   Making simple things look complicated.
@@ -334,7 +343,7 @@ export default function About() {
                 </p>
                 <p>But the goal is simple:</p>
                 <p className="text-foreground font-semibold text-lg">
-                  Build the kind of agency that doesn't treat transparency like a marketing feature.
+                  Build the kind of company that doesn't treat transparency like a marketing feature.
                 </p>
                 <p className="text-foreground font-medium text-xl">
                   It should be the default.
@@ -372,12 +381,12 @@ export default function About() {
               </h2>
               <div className="text-muted-foreground text-lg leading-relaxed space-y-4">
                 <p>
-                  We're not trying to be the biggest agency. We're trying to be the 
+                  We're not trying to be the biggest company. We're trying to be the 
                   most honest one. The one that brands trust because we've earned it.
                 </p>
                 <p>
                   In five years, we want to be known as the team that changed how 
-                  agencies work with data. The ones who made transparency the industry 
+                  companies work with data. The ones who made transparency the industry 
                   standard, not the exception.
                 </p>
                 <p className="text-foreground font-semibold text-xl">
@@ -407,7 +416,7 @@ export default function About() {
                     Like What You See?
                   </h2>
                   <p className="text-muted-foreground text-lg mb-8">
-                    If this sounds like the kind of agency you want to work with, 
+                    If this sounds like the kind of company you want to work with, 
                     let's talk. No pressure, no pitch. Just a conversation.
                   </p>
                   <Link to="/contact">

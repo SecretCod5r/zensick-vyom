@@ -123,9 +123,9 @@ export default function Blog() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="D2C Growth Blog | Performance Marketing Insights" 
-        description="Read the latest insights on D2C growth, Meta ads strategy, Shopify optimization, and data-driven performance marketing from ZENSICK."
-        canonicalUrl="https://zensick.com/blog"
+        title="Growth Blog | Digital Strategy & Analytics Insights" 
+        description="Read the latest insights on digital growth strategy, analytics, performance marketing, and data-driven decision making from ZENSICK."
+        canonicalUrl="https://www.zensick.com/blog"
       />
       <Navbar />
       
@@ -150,7 +150,7 @@ export default function Blog() {
               </h1>
               
               <p className="text-muted-foreground text-lg md:text-xl">
-                Deep dives into performance marketing, analytics, and growth strategies. 
+                Deep dives into digital strategy, analytics, and growth. 
                 Learn from our experiences scaling brands through data-driven decisions.
               </p>
             </AnimatedSection>

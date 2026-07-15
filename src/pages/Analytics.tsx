@@ -82,9 +82,9 @@ export default function Analytics() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Analytics & Tracking | GA4 & Meta Pixel Setup" 
-        description="Stop guessing. We set up advanced GA4 architecture, Meta Pixel with CAPI, and Looker Studio dashboards for perfect attribution."
-        canonicalUrl="https://zensick.com/analytics"
+        title="Analytics & Intelligence | Our Flagship Capability" 
+        description="Every decision backed by data. Advanced GA4 architecture, Meta Pixel with CAPI, conversion tracking, and actionable dashboards for perfect attribution."
+        canonicalUrl="https://www.zensick.com/analytics"
       />
       <Navbar />
       <main className="pt-24">
@@ -111,7 +111,7 @@ export default function Analytics() {
                 <BarChart3 className="w-4 h-4 text-primary" />
               </motion.div>
               <span className="text-sm font-medium text-muted-foreground">
-                Our Unfair Advantage
+                Flagship Capability
               </span>
             </motion.div>
             <motion.h1 
@@ -120,7 +120,7 @@ export default function Analytics() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
             >
-              Analytics Is <span className="text-gradient">Everything</span>
+              Analytics &{" "}<span className="text-gradient">Intelligence</span>
             </motion.h1>
             <motion.p 
               className="text-lg text-muted-foreground mb-8"
@@ -128,8 +128,8 @@ export default function Analytics() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              Most agencies treat tracking as an afterthought. We treat it as the foundation. 
-              Without proper data, you're just guessing. We don't guess.
+              Every decision should be backed by data. We build robust tracking systems 
+              and actionable dashboards so you know exactly what's working, why it's working, and where to scale.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
