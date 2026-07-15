@@ -8,6 +8,7 @@ import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button
 
 const navLinks = [
   { name: "Services", href: "/services" },
+  { name: "Analytics", href: "/analytics" },
   { name: "Case Studies", href: "/case-studies" },
   { name: "Blog", href: "/blog" },
   { name: "About", href: "/about" },
@@ -16,6 +17,7 @@ const navLinks = [
 const tubelightItems = [
   { name: "Home", url: "/", icon: Home },
   { name: "Services", url: "/services", icon: Briefcase },
+  { name: "Analytics", url: "/analytics", icon: BarChart3 },
   { name: "Case Studies", url: "/case-studies", icon: FolderOpen },
   { name: "Blog", url: "/blog", icon: BookOpen },
   { name: "About", url: "/about", icon: Users },
