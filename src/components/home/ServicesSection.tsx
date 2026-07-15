@@ -1,45 +1,52 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight, Target, PenTool, BarChart3, Globe, Megaphone } from "lucide-react";
+import { ArrowRight, Target, PenTool, BarChart3, Globe, Lightbulb, Heart, Brain } from "lucide-react";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/ui/AnimatedSection";
 import { GlowOrb } from "@/components/ui/BackgroundEffects";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 const services = [
   {
-    icon: Target,
-    title: "Performance Marketing",
-    description: "Meta, Google, and YouTube campaigns built on testing frameworks. We find what works, then scale it relentlessly.",
-    features: ["Multi-step funnels", "A/B testing", "Audience research", "CRO & offer testing"],
+    icon: Lightbulb,
+    title: "Marketing Strategy",
+    description: "Define positioning, identify opportunities, and create scalable growth roadmaps before execution begins.",
+    features: ["Branding", "Growth Strategy", "GTM Planning", "Customer Journey Mapping"],
     isHighlighted: false,
   },
   {
     icon: PenTool,
-    title: "Creative Ads",
-    description: "Data-informed creative direction. Reels, carousels, and ad copy built to test, iterate, and convert.",
-    features: ["Shot & AI reels", "Carousel ads", "Creative testing", "Brand guide alignment"],
+    title: "Creative + Content",
+    description: "High-performing visual content designed to capture attention, communicate value, and drive results.",
+    features: ["Ad Creatives", "Video & Motion", "Social Media", "UGC & Testimonials"],
+    isHighlighted: false,
+  },
+  {
+    icon: Target,
+    title: "Performance Marketing",
+    description: "Data-driven paid acquisition across digital platforms, continuously optimized for measurable ROI.",
+    features: ["Meta Ads", "Lead Generation", "Ecommerce Ads", "A/B Testing"],
+    isHighlighted: false,
+  },
+  {
+    icon: Heart,
+    title: "CRM & Retention",
+    description: "Nurture leads, retain customers, and maximize lifetime value through personalized lifecycle marketing.",
+    features: ["CRM Setup", "Email Marketing", "WhatsApp Marketing", "Lifecycle Automation"],
+    isHighlighted: false,
+  },
+  {
+    icon: Brain,
+    title: "Analytics & Intelligence",
+    description: "Robust tracking systems and actionable dashboards. Know exactly what's working and where to scale.",
+    features: ["GA4 + GTM", "Meta Pixel + CAPI", "Dashboarding", "Attribution"],
     isHighlighted: true,
   },
   {
-    icon: BarChart3,
-    title: "Analytics & Reporting",
-    description: "Custom dashboards, proper attribution, and insights that actually matter. Know exactly where your money goes.",
-    features: ["GA4 + Conversion API", "Looker Studio 360°", "Weekly insight calls", "Competitor analysis"],
-    isHighlighted: false,
-  },
-  {
     icon: Globe,
-    title: "Website Development & SEO",
-    description: "Custom-built sites on Shopify, Wix, Odoo & WordPress. SEO infrastructure that turns traffic into conversions.",
-    features: ["Custom websites", "On-page + AI SEO", "Landing pages", "Full integrations"],
-    isHighlighted: false,
-  },
-  {
-    icon: Megaphone,
-    title: "Influencer Marketing",
-    description: "Strategic influencer partnerships that drive real results. We identify, manage, and optimize creator campaigns.",
-    features: ["Creator outreach", "Campaign strategy", "Content collaboration", "ROI tracking"],
+    title: "Web Development & SEO",
+    description: "High-performing digital experiences that convert visitors into customers with long-term organic visibility.",
+    features: ["Website Development", "Shopify", "Landing Pages", "SEO & CRO"],
     isHighlighted: false,
   },
 ];
@@ -60,10 +67,10 @@ export function ServicesSection() {
             <span className="text-sm font-medium">What We Do</span>
           </span>
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
-            Five Things. <span className="text-primary">Done Right.</span>
+            Six Verticals. <span className="text-primary">Done Right.</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            We don't do everything. We do five things obsessively well.
+            We don't do everything. We do six things obsessively well.
             That's how you get results, not excuses.
           </p>
         </AnimatedSection>

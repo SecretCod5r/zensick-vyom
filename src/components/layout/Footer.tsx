@@ -9,9 +9,12 @@ const footerLinks = {
     { name: "Contact", href: "/contact" },
   ],
   services: [
+    { name: "Marketing Strategy", href: "/services" },
+    { name: "Creative + Content", href: "/services" },
     { name: "Performance Marketing", href: "/services" },
-    { name: "Analytics & Reporting", href: "/analytics" },
-    { name: "Creative Strategy", href: "/services" },
+    { name: "CRM & Retention", href: "/services" },
+    { name: "Analytics & Intelligence", href: "/services" },
+    { name: "Web Development & SEO", href: "/services" },
   ],
   resources: [
     { name: "Free Audit", href: "/contact" },
@@ -57,7 +60,7 @@ export function Footer() {
               </motion.span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-              We don't guess. We track, test, and scale.
+              We don't guess. We predict.
             </p>
             {/* Red dot signature */}
             <div className="relative">

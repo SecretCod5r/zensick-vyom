@@ -62,7 +62,7 @@ export function HeroSection() {
                 ease: "easeInOut"
               }} />
                 <span className="text-sm font-medium text-foreground/80">
-                  Performance Marketing & Analytics Agency
+                  360° Digital Growth Company
                 </span>
               </div>
             </AnimatedSection>
@@ -72,7 +72,7 @@ export function HeroSection() {
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
                 We Don't Guess.{" "}
                 <span className="text-primary">
-                  We Track, Test & Scale.
+                  We Predict.
                 </span>
               </h1>
             </AnimatedSection>

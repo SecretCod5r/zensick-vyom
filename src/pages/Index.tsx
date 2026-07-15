@@ -11,30 +11,15 @@ import { WavePath } from "@/components/ui/wave-path";
 import { PulseBeamsConnector } from "@/components/home/PulseBeamsConnector";
 import { SEO } from "@/components/seo/SEO";
 
-const schema = [
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "ZENSICK",
-    "url": "https://zensick.com",
-    "logo": "https://zensick.com/favicon.png"
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "ZENSICK",
-    "url": "https://zensick.com"
-  }
-];
+
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Performance Marketing & Analytics Agency" 
-        description="We don't guess. We predict. ZENSICK is a performance marketing and analytics agency for D2C brands going online for the first time."
-        canonicalUrl="https://zensick.com/"
-        schema={schema}
+        title="360° Digital Growth Company" 
+        description="We don't guess. We predict. ZENSICK is a strategy-first, analytics-driven digital growth company that scales brands through six integrated service verticals."
+        canonicalUrl="https://www.zensick.com/"
       />
       <Navbar />
       <main>
