@@ -23,6 +23,7 @@ const caseStudies = [
       "Instagram setup — structured content plan, bulk-first messaging",
       "Ad campaign: ₹1,200 spent, 200 inquiries, ₹5.61 per conversation",
     ],
+    // TODO: verify ₹20 lakh bulk order claim with client
     results: {
       presence: { before: "None", after: "Fully structured" },
       funnel: { before: "No funnel", after: "Lead-optimized" },
@@ -44,9 +45,10 @@ const caseStudies = [
       "Tracking architecture — Meta Pixel with CAPI, GA4, Looker Studio dashboard, custom events",
       "Operational setup — Razorpay, Shiprocket + IThink logistics, domain + policy structuring",
     ],
+    // TODO: add timeframe and spend verification with client
     results: {
-      roas: { before: "0x", after: "2.8x" },
-      cac: { before: "N/A", after: "₹420" },
+      roas: { before: "", after: "2.8x" },
+      cac: { before: "", after: "₹420" },
       status: { before: "No store", after: "Fully operational D2C" },
     },
     insight: "The first unlock wasn't ads. It was building infrastructure that could measure them.",
@@ -64,8 +66,8 @@ const caseStudies = [
       "Tracking architecture — GA4 event mapping, custom conversion events, user-level tracking",
       "30-day growth blueprint — measurement → controlled acquisition → retention optimization",
     ],
+    // TODO: real defined metric needed for Starrvault (removed 0% to 95% visibility stat)
     results: {
-      visibility: { before: "0%", after: "95%" },
       confidence: { before: "Gut-based", after: "Data-driven" },
       activation: { before: "Undefined", after: "Defined & tracked" },
     },
@@ -163,28 +165,11 @@ export default function CaseStudies() {
         {/* Zoom Parallax Section */}
         <ZoomParallaxSection />
 
-        {/* Honest Note */}
-        <section className="py-12 relative">
-          <div className="container mx-auto px-4 md:px-6">
-            <motion.div 
-              className="relative bg-card rounded-2xl p-6 max-w-3xl mx-auto text-center border border-border"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <p className="text-muted-foreground">
-                <span className="text-primary font-bold">A note on honesty:</span> These are real clients. 
-                Real problems. We share the thinking behind the results, not just the highlight reel.
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
         {/* PulseBeams Connector */}
         <PulseBeamsConnector className="py-8" />
 
         {/* Case Studies */}
-        <section className="py-24 relative overflow-hidden">
+        <section id="case-studies-list" className="py-24 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/3 to-background" />
           
           <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -327,10 +312,14 @@ export default function CaseStudies() {
                                   {key.replace(/([A-Z])/g, ' $1').trim()}
                                 </p>
                                 <div className="flex items-center gap-4">
-                                  <span className="text-muted-foreground line-through text-lg">
-                                    {value.before}
-                                  </span>
-                                  <ArrowRight className="w-5 h-5 text-primary" />
+                                  {value.before ? (
+                                    <>
+                                      <span className="text-muted-foreground line-through text-lg">
+                                        {value.before}
+                                      </span>
+                                      <ArrowRight className="w-5 h-5 text-primary" />
+                                    </>
+                                  ) : null}
                                   <span className="text-2xl font-display font-bold text-gradient-primary">
                                     {value.after}
                                   </span>

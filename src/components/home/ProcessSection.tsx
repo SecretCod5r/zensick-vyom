@@ -96,9 +96,10 @@ export function ProcessSection() {
         {/* Bottom Stats */}
         <AnimatedSection delay={0.4} className="mt-16 relative">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            {/* TODO: restore numbers only if backed by a test log and a GA4 or Events Manager export */}
             {[
-              { label: "Consistent experimentation", value: "12+ Tests / Month" },
-              { label: "Decision-grade data", value: "50K+ Events Tracked" },
+              { label: "Consistent experimentation", value: "Structured testing before scaling" },
+              { label: "Decision-grade data", value: "Custom event tracking for every client" },
               { label: "Scaled with confidence", value: "Only Proven Winners" },
               { label: "No blind spend", value: "Validated Scaling" },
             ].map((stat, index) => (

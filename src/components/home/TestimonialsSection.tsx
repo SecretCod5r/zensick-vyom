@@ -42,34 +42,14 @@ export function TestimonialsSection() {
           </motion.div>
 
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
-            <span className="text-primary">Trusted</span> by Growth Leaders
+            what clients say
           </h2>
           
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">See why D2C brands choose ZENSICK for their marketing and analytics needs.</p>
         </AnimatedSection>
 
-        <div className="flex flex-col items-center justify-center gap-12">
+        <div className="flex flex-col items-center justify-center">
           <ShuffleCards testimonials={testimonials} />
-
-          <AnimatedSection direction="up" className="w-full max-w-md">
-            <motion.div className="flex items-center justify-center gap-4 p-4 rounded-xl bg-card/50 backdrop-blur-xl border border-border/50" initial={{
-              opacity: 0,
-              y: 20
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} viewport={{
-              once: true
-            }} whileHover={{
-              scale: 1.02,
-              borderColor: "hsl(var(--primary) / 0.3)"
-            }}>
-                  <div className="text-3xl font-display font-bold text-primary">
-                    98%
-                  </div>
-                  <div className="text-sm text-muted-foreground">Client Satisfaction Rate</div>
-                </motion.div>
-          </AnimatedSection>
         </div>
       </div>
     </section>;

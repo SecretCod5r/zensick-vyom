@@ -32,11 +32,11 @@ const beliefs = [
   },
 ];
 
-const stats = [
-  { value: "100%", label: "Data Transparency" },
-  { value: "0", label: "Vanity Metrics" },
-  { value: "24/7", label: "Dashboard Access" },
-  { value: "∞", label: "Growth Potential" },
+const commitments = [
+  "Weekly snapshot",
+  "Monthly report",
+  "Quarterly strategy review",
+  "30 days written notice to cancel",
 ];
 
 import { SEO } from "@/components/seo/SEO";
@@ -180,18 +180,17 @@ export default function About() {
                       </div>
                       
                       <div className="grid grid-cols-2 gap-4">
-                        {stats.map((stat, index) => (
+                        {commitments.map((statement, index) => (
                           <motion.div 
-                            key={stat.label}
-                            className="bg-background/50 backdrop-blur-sm p-5 rounded-2xl text-center border border-primary/10"
+                            key={statement}
+                            className="bg-background/50 backdrop-blur-sm p-5 rounded-2xl text-center border border-primary/10 flex items-center justify-center min-h-[90px]"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
                             whileHover={{ y: -3, borderColor: "hsl(8 83% 51% / 0.3)" }}
                           >
-                            <p className="text-3xl font-display font-bold text-gradient-primary">{stat.value}</p>
-                            <p className="text-xs text-muted-foreground mt-1">{stat.label}</p>
+                            <p className="text-sm md:text-base font-medium text-foreground">{statement}</p>
                           </motion.div>
                         ))}
                       </div>

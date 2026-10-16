@@ -269,27 +269,7 @@ export default function Analytics() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <div className="absolute top-3 left-6 flex items-center gap-2">
-                  <motion.div 
-                    className="w-3 h-3 rounded-full bg-destructive/50"
-                    animate={{ scale: [1, 1.2, 1] }}
-                    transition={{ duration: 2, repeat: Infinity, delay: 0 }}
-                    style={{ willChange: "transform" }}
-                  />
-                  <motion.div 
-                    className="w-3 h-3 rounded-full bg-accent/50"
-                    animate={{ scale: [1, 1.2, 1] }}
-                    transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
-                    style={{ willChange: "transform" }}
-                  />
-                  <motion.div 
-                    className="w-3 h-3 rounded-full bg-primary/50"
-                    animate={{ scale: [1, 1.2, 1] }}
-                    transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
-                    style={{ willChange: "transform" }}
-                  />
-                </div>
-                <div className="pt-8 space-y-5">
+                <div className="space-y-5">
                   {/* Dashboard Header */}
                   <motion.div 
                     className="flex items-center justify-between"
@@ -393,9 +373,11 @@ export default function Analytics() {
                     </motion.div>
                   </div>
                 </div>
-                <p className="text-center text-[10px] text-muted-foreground mt-4 opacity-60">
-                  Sample dashboard · Powered by Looker Studio + GA4
-                </p>
+                <div className="mt-5 pt-3 border-t border-border/40 flex items-center justify-center">
+                  <span className="text-xs font-medium text-muted-foreground px-3 py-1 rounded-full bg-muted/60 border border-border/60">
+                    Sample dashboard, illustrative data
+                  </span>
+                </div>
               </motion.div>
             </div>
           </div>

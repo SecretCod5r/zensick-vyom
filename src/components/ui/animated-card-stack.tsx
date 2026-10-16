@@ -65,9 +65,13 @@ function CardContent({ contentType }: { contentType: number }) {
   const data = cardData[contentType] || cardData[1]
   const navigate = useNavigate()
 
+  // Internal link to /blog removed per brand audit (blog unlinked across site)
   const handleViewClick = (e: React.MouseEvent) => {
     e.stopPropagation()
-    navigate(`/blog/${data.slug}`)
+    const element = document.getElementById("case-studies-list")
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+    }
   }
 
   return (

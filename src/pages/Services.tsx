@@ -316,7 +316,7 @@ export default function Services() {
                 Every Client Gets
               </h2>
               <p className="text-muted-foreground text-lg">
-                Zero lock-ins. Growth decides continuation.
+                3 month minimum on single service retainers, 6 months on bundles, 30 days written notice to cancel.
               </p>
             </motion.div>
 

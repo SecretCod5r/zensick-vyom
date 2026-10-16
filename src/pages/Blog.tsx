@@ -1,3 +1,4 @@
+// /blog route and files are kept intact but unlinked across the site per brand audit guidelines
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Navbar } from "@/components/layout/Navbar";

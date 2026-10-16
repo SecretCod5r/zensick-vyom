@@ -6,11 +6,11 @@ import { motion, AnimatePresence, useMotionValue, useSpring } from "framer-motio
 import { TubelightNavBar } from "@/components/ui/tubelight-navbar";
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 
+// /blog route and files preserved but hidden from navigation per brand audit guidelines
 const navLinks = [
   { name: "Services", href: "/services" },
   { name: "Analytics", href: "/analytics" },
   { name: "Case Studies", href: "/case-studies" },
-  { name: "Blog", href: "/blog" },
   { name: "About", href: "/about" },
 ];
 
@@ -19,7 +19,6 @@ const tubelightItems = [
   { name: "Services", url: "/services", icon: Briefcase },
   { name: "Analytics", url: "/analytics", icon: BarChart3 },
   { name: "Case Studies", url: "/case-studies", icon: FolderOpen },
-  { name: "Blog", url: "/blog", icon: BookOpen },
   { name: "About", url: "/about", icon: Users },
   { name: "Contact", url: "/contact", icon: Mail },
 ];
