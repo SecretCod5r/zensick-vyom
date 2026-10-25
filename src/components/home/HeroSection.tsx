@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, TrendingUp, Users, DollarSign, LineChart, FlaskConical, Eye } from "lucide-react";
 import { StarField, HeroGlow, GridBackground } from "@/components/ui/BackgroundEffects";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/ui/AnimatedSection";
-import ProceduralGroundBackground from "@/components/ui/procedural-ground-background";
+import BrandBackground from "@/components/ui/brand-background";
 import DisplayCards from "@/components/ui/display-cards";
 
 const displayCardsData = [{
@@ -35,10 +35,8 @@ const displayCardsData = [{
 
 export function HeroSection() {
   return <section className="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
-      {/* WebGL Background */}
-      <div className="absolute inset-0 z-0">
-        <ProceduralGroundBackground />
-      </div>
+      {/* Brand Background */}
+      <BrandBackground className="z-0" />
       
       {/* Additional Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-transparent to-background/80 pointer-events-none z-[1]" />
@@ -53,14 +51,7 @@ export function HeroSection() {
             {/* Badge */}
             <AnimatedSection delay={0}>
               <div className="pill-gradient mb-8 inline-flex">
-                <motion.div className="w-2 h-2 rounded-full bg-primary" animate={{
-                scale: [1, 1.3, 1],
-                opacity: [1, 0.6, 1],
-              }} transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }} />
+                <div className="w-2 h-2 rounded-full bg-primary" />
                 <span className="text-sm font-medium text-foreground/80">
                   360° Digital Growth Company
                 </span>

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, TrendingUp, Target, BarChart3, Sparkles, Lightbulb } from "lucide-react";
-import ProceduralGroundBackground from "@/components/ui/procedural-ground-background";
+import BrandBackground from "@/components/ui/brand-background";
 import AnimatedCardStack from "@/components/ui/animated-card-stack";
 import { ZoomParallaxSection } from "@/components/casestudies/ZoomParallaxSection";
 import { PulseBeamsConnector } from "@/components/home/PulseBeamsConnector";
@@ -109,7 +109,7 @@ export default function CaseStudies() {
       <main className="pt-24">
         {/* Hero */}
         <section className="py-24 relative overflow-hidden min-h-[60vh] flex items-center">
-          <ProceduralGroundBackground />
+          <BrandBackground />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
           
           <div className="container mx-auto px-4 md:px-6 relative z-10">

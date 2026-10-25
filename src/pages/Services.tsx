@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Target, PenTool, BarChart3, Check, Sparkles, Zap, Globe, Lightbulb, Heart, Brain, type LucideIcon } from "lucide-react";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
-import ProceduralGroundBackground from "@/components/ui/procedural-ground-background";
+import BrandBackground from "@/components/ui/brand-background";
 
 interface ServiceSection {
   icon: LucideIcon;
@@ -156,7 +156,7 @@ export default function Services() {
       <main className="pt-24">
         {/* Hero */}
         <section className="py-24 relative overflow-hidden min-h-[60vh] flex items-center">
-          <ProceduralGroundBackground />
+          <BrandBackground />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
 
           <div className="container mx-auto px-4 md:px-6 relative z-10">

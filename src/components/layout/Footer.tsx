@@ -59,8 +59,11 @@ export function Footer() {
                 ZENSICK
               </motion.span>
             </Link>
-            <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+            <p className="text-muted-foreground text-sm leading-relaxed mb-3">
               We don't guess. We predict.
+            </p>
+            <p className="text-xs text-muted-foreground/80 mb-6">
+              Incubated under MHCIIE · Hansraj E-Cell · Delhi University
             </p>
             {/* Red dot signature */}
             <div className="relative">
@@ -192,11 +195,9 @@ export function Footer() {
               © {new Date().getFullYear()} ZENSICK. All rights reserved.
             </p>
             {/* Red dot signature */}
-            <motion.div 
+            <div 
               className="w-1 h-1 rounded-full bg-primary opacity-40" 
               aria-hidden="true"
-              animate={{ opacity: [0.4, 0.8, 0.4] }}
-              transition={{ duration: 2, repeat: Infinity }}
             />
           </div>
           <div className="flex items-center gap-6">

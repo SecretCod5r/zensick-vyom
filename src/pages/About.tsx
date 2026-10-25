@@ -142,6 +142,9 @@ export default function About() {
                         </div>
                         <h3 className="font-display text-2xl font-bold mb-2">ZENSICK</h3>
                         <p className="text-muted-foreground">Strategy & Digital Growth</p>
+                        <p className="text-xs text-primary/80 mt-2 font-medium tracking-wide">
+                          Incubated under MHCIIE · Hansraj E-Cell · Delhi University
+                        </p>
                       </div>
                       
                       <div className="grid grid-cols-2 gap-4">

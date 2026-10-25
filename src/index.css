@@ -111,19 +111,8 @@
 }
 
 @layer components {
-  /* Red accent text — replaces gradient text */
-  .text-gradient {
-    color: hsl(8 83% 51%);
-  }
-
-  .text-gradient-vibrant {
-    color: hsl(8 83% 51%);
-  }
-
-  .text-gradient-blue {
-    color: hsl(8 83% 51%);
-  }
-
+  /* Red accent text */
+  .text-gradient,
   .text-gradient-primary {
     color: hsl(8 83% 51%);
   }
@@ -213,11 +202,6 @@
     border: 1px solid hsl(8 83% 51% / 0.3);
   }
 
-  .icon-box-blue {
-    @apply rounded-xl flex items-center justify-center;
-    background: hsl(230 15% 10%);
-    border: 1px solid hsl(8 83% 51% / 0.3);
-  }
 
   /* Animated underline for links */
   .link-underline {

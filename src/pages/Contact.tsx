@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { motion } from "framer-motion";
 import { Calendar, MessageCircle, Mail, ArrowRight, Clock, CheckCircle, Sparkles, Zap } from "lucide-react";
-import ProceduralGroundBackground from "@/components/ui/procedural-ground-background";
+import BrandBackground from "@/components/ui/brand-background";
 
 const expectations = [
 "15-minute discovery call to understand your business",
@@ -33,7 +33,7 @@ export default function Contact() {
     const interest = formData.get("interest") as string;
     const message = formData.get("message") as string;
 
-    // The user will need to replace this with their actual key or set it in Vercel
+    // Web3Forms access key (restricted to domain 'zensick.com' in Web3Forms dashboard)
     const accessKey = "9160f82e-3e87-4a3e-b772-9b58d84d5321";
     
     try {
@@ -93,23 +93,11 @@ export default function Contact() {
       <main className="pt-24">
         {/* Hero */}
         <section className="py-24 relative overflow-hidden min-h-[50vh] flex items-center">
-          <ProceduralGroundBackground />
+          <BrandBackground />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
           
           <div className="container mx-auto px-4 md:px-6 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
-              <motion.div
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 mb-6"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}>
-
-                <Sparkles className="w-4 h-4 text-primary" />
-                <span className="text-sm uppercase tracking-wider text-primary font-semibold">
-                  Let's Talk
-                </span>
-              </motion.div>
-              
               <motion.h1
                 className="font-display text-4xl md:text-6xl font-bold mb-6"
                 initial={{ opacity: 0, y: 20 }}
