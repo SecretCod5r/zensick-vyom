@@ -70,8 +70,7 @@ export function ServicesSection() {
             Six Verticals. <span className="text-primary">Done Right.</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            We don't do everything. We do six things obsessively well.
-            That's how you get results, not excuses.
+            strategy, creative, performance, CRM, analytics and development, built to work together.
           </p>
         </AnimatedSection>
 

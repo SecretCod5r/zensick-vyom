@@ -119,7 +119,7 @@ export const HighlighterItem: React.FC<
 > = ({ children, className = "" }) => {
   return (
     <div
-      className={`relative overflow-hidden rounded-xl bg-secondary/50 p-px before:pointer-events-none before:absolute before:-left-48 before:-top-48 before:z-30 before:h-96 before:w-96 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-primary/30 before:opacity-0 before:blur-[100px] before:transition-opacity before:duration-500 after:absolute after:inset-0 after:z-10 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),theme(colors.primary/0.3),transparent)] hover:before:opacity-100 hover:after:opacity-100 ${className}`}
+      className={`relative overflow-hidden rounded-xl bg-secondary/50 p-px before:pointer-events-none before:absolute before:-left-48 before:-top-48 before:z-30 before:h-96 before:w-96 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-primary/30 before:opacity-0 before:blur-[100px] before:transition-opacity before:duration-500 after:absolute after:inset-0 after:z-10 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),hsl(var(--primary)/0.3),transparent)] hover:before:opacity-100 hover:after:opacity-100 ${className}`}
     >
       {children}
     </div>

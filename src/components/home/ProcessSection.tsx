@@ -77,8 +77,7 @@ export function ProcessSection() {
             How We <span className="text-primary">Actually Work</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            No mysterious "strategies." No vague promises. 
-            Just a clear, repeatable system that produces results.
+            a four step process we use on every engagement. each step produces evidence before we move on.
           </p>
         </AnimatedSection>
 

@@ -19,7 +19,7 @@ const philosophy = [
   },
   {
     icon: Eye,
-    title: "Radical Transparency",
+    title: "Full Transparency",
     description: "You get full access to every dashboard, every data point. No hiding behind PDFs or 'proprietary methodologies.'"
   },
   {
@@ -298,7 +298,7 @@ export default function Analytics() {
                       { label: "Avg. Order Value", value: "₹672", tooltip: "Average revenue per order" },
                       { label: "Conv. Rate", value: "3.2%", tooltip: "Percentage of visitors who purchased" },
                       { label: "Ad Spend", value: "₹3.8L", tooltip: "Total amount spent on advertising" },
-                      { label: "ROAS", value: "3.26x", tooltip: "Return on Ad Spend — revenue per rupee spent" },
+                      { label: "ROAS", value: "3.26x", tooltip: "Return on Ad Spend: revenue per rupee spent" },
                     ].map((kpi, i) => (
                       <HoverCard key={kpi.label} openDelay={100} closeDelay={50}>
                         <HoverCardTrigger asChild>
@@ -393,7 +393,7 @@ export default function Analytics() {
               viewport={{ once: true }}
             >
               <h2 className="font-display text-3xl font-bold mb-4">
-                KPIs We Actually Care About
+                KPIs we track
               </h2>
               <p className="text-muted-foreground">
                 Not impressions. Not reach. Real metrics that tie to revenue.

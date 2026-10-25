@@ -25,7 +25,7 @@ const blogPosts = [
   id: 2,
   slug: "smart-analytics-real-time-insights",
   title: "Smart Analytics: Unlocking Real-Time Performance Insights for Better Decisions",
-  excerpt: "Real-time analytics aren't just a luxury—they're a necessity. Learn how to set up dashboards that provide actionable insights and help you make data-driven decisions instantly.",
+  excerpt: "Real-time analytics aren't just a luxury, they're a necessity. Learn how to set up dashboards that provide actionable insights and help you make data-driven decisions instantly.",
   image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop",
   category: "Analytics",
   author: "ZENSICK Team",

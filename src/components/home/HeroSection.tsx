@@ -80,20 +80,19 @@ export function HeroSection() {
             {/* Subheadline */}
             <AnimatedSection delay={0.2}>
               <p className="text-lg md:text-xl text-muted-foreground max-w-xl mb-10 leading-relaxed">
-                Stop burning budget on blind scaling. ZENSICK builds data-driven 
-                growth engines that turn ad spend into predictable revenue.
+                we set up your tracking first, then run Meta and Google ads you can measure down to the rupee.
               </p>
             </AnimatedSection>
 
             {/* CTAs */}
             <AnimatedSection delay={0.3}>
               <div className="flex flex-col sm:flex-row items-start gap-4 mb-12">
-                <Link to="/contact">
+                <a href="https://calendly.com/connect-zensick/discovery" target="_blank" rel="noopener noreferrer">
                   <Button variant="pill" size="xl" className="group btn-shimmer">
                     Book a Call
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
-                </Link>
+                </a>
                 <Link to="/contact">
                   <Button variant="pillOutline" size="xl" className="btn-glow">
                     Get a Free Audit

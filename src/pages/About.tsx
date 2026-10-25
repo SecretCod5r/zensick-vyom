@@ -84,8 +84,7 @@ export default function About() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
               >
-                We're Not Your Typical{" "}
-                <span className="text-gradient-primary">Company</span>
+                a small team building an honest marketing company.
               </motion.h1>
               
               <motion.p 
@@ -94,8 +93,7 @@ export default function About() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
               >
-                We started ZENSICK because we got tired of the BS. Vanity metrics. 
-                Black-box reporting. Companies that hide behind complexity.
+                ZENSICK exists because marketing companies make simple things complicated. we think you should see everything we see.
               </motion.p>
             </div>
           </div>
@@ -300,7 +298,7 @@ export default function About() {
                 <div className="relative rounded-3xl overflow-hidden border-2 border-primary/20 shadow-2xl shadow-primary/10">
                   <img
                     src={vyomImage}
-                    alt="Vyom — Founder of ZENSICK"
+                    alt="Vyom, Founder of ZENSICK"
                     className="w-full max-w-[320px] object-cover aspect-[3/4]"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />

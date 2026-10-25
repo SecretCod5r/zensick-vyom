@@ -140,7 +140,7 @@ const schema = {
   "@type": "WebPage",
   "name": "ZENSICK Services",
   "url": "https://zensick.com/services",
-  "description": "ZENSICK digital growth services — strategy, creative, performance marketing, CRM, analytics, and web development.",
+  "description": "ZENSICK digital growth services: strategy, creative, performance marketing, CRM, analytics, and web development.",
 };
 
 export default function Services() {
@@ -179,8 +179,7 @@ export default function Services() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
               >
-                We Don't Guess.{" "}
-                <span className="text-gradient-primary">We Predict.</span>
+                everything we do, how we do it, and what you get.
               </motion.h1>
 
               <motion.p
@@ -189,7 +188,7 @@ export default function Services() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
               >
-                Strategy, creative, performance, retention, intelligence, and development — six growth verticals built to scale brands, not inflate vanity metrics.
+                Strategy, creative, performance, retention, intelligence, and development, six growth verticals built to scale brands, not inflate vanity metrics.
               </motion.p>
             </div>
           </div>

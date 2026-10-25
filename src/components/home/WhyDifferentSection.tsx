@@ -45,11 +45,10 @@ export function WhyDifferentSection() {
             </span>
           </motion.div>
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
-            We're Not <span className="text-primary">Another Agency</span>
+            how we work
           </h2>
           <p className="text-muted-foreground text-lg">
-            There's a reason most agencies avoid showing you the numbers. 
-            We're built different.
+            a direct comparison between our approach and common agency practices.
           </p>
         </AnimatedSection>
 
@@ -72,7 +71,7 @@ export function WhyDifferentSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              {/* Header Row — No Z icon, just ZENSICK text */}
+              {/* Header Row: No Z icon, just ZENSICK text */}
               <div className="grid grid-cols-2 gap-4 p-6 border-b border-border/50 bg-primary/3">
                 <div className="flex items-center gap-3">
                   <span className="font-display font-bold text-xl tracking-[0.15em] uppercase">ZENSICK</span>

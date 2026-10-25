@@ -17,10 +17,10 @@ const caseStudies = [
     context: "A 60-year textile business entering online for the first time. Primary goal: bulk enquiries. Secondary: retail sales.",
     challenge: "No digital positioning. No bulk-focused landing structure. No tracking infrastructure. No B2B clarity. No event optimization. Running ads immediately would waste spend.",
     approach: [
-      "Homepage restructure — Retail vs Bulk split, trust strip, reviews + FAQ, clear CTA hierarchy",
-      "Bulk landing page — 500m minimum positioning, WhatsApp-focused conversion, production clarity",
-      "Tracking setup — Meta Business Manager, Pixel + CAPI, GA4 property, lead-focused strategy",
-      "Instagram setup — structured content plan, bulk-first messaging",
+      "Homepage restructure: Retail vs Bulk split, trust strip, reviews + FAQ, clear CTA hierarchy",
+      "Bulk landing page: 500m minimum positioning, WhatsApp-focused conversion, production clarity",
+      "Tracking setup: Meta Business Manager, Pixel + CAPI, GA4 property, lead-focused strategy",
+      "Instagram setup: structured content plan, bulk-first messaging",
       "Ad campaign: ₹1,200 spent, 200 inquiries, ₹5.61 per conversation",
     ],
     // TODO: verify ₹20 lakh bulk order claim with client
@@ -37,13 +37,13 @@ const caseStudies = [
     title: "VYRE",
     category: "E-commerce Foundation & Growth Architecture",
     subtitle: "Gen Z Streetwear · Pre-Scale D2C",
-    context: "VYRE was a Gen Z streetwear startup built around emotionally heavy, minimal, chaos-inspired design. Strong aesthetic vision — but no digital infrastructure, no analytics, no scalable funnel. This became ZENSICK's first full-stack engagement.",
+    context: "VYRE was a Gen Z streetwear startup built around emotionally heavy, minimal, chaos-inspired design. Strong aesthetic vision, but no digital infrastructure, no analytics, no scalable funnel. This became ZENSICK's first full-stack engagement.",
     challenge: "No conversion-optimized website. No tracking system. No AOV strategy. No structured pre-order logic. No analytics visibility. Scaling without structure would burn money.",
     approach: [
-      "Full Shopify build — dark Gen Z-aligned UI, conversion-focused product pages, urgency triggers",
-      "AOV optimization — incentive cart bar, mystery box mechanic for inventory + hype",
-      "Tracking architecture — Meta Pixel with CAPI, GA4, Looker Studio dashboard, custom events",
-      "Operational setup — Razorpay, Shiprocket + IThink logistics, domain + policy structuring",
+      "Full Shopify build: dark Gen Z-aligned UI, conversion-focused product pages, urgency triggers",
+      "AOV optimization: incentive cart bar, mystery box mechanic for inventory + hype",
+      "Tracking architecture: Meta Pixel with CAPI, GA4, Looker Studio dashboard, custom events",
+      "Operational setup: Razorpay, Shiprocket + IThink logistics, domain + policy structuring",
     ],
     // TODO: add timeframe and spend verification with client
     results: {
@@ -58,13 +58,13 @@ const caseStudies = [
     title: "STARRVAULT",
     category: "SaaS Growth Architecture",
     subtitle: "Privacy-First Productivity SaaS · Post-MVP",
-    context: "Starrvault had 18 users, a working product, but no growth funnel, no activation definition, and no retention tracking. They didn't want vanity signups — they wanted meaningful users.",
-    challenge: "No activation metric. No D1/D7 retention tracking. No event architecture. No paid experiment history. No funnel visibility. They were ready to market — but blind.",
+    context: "Starrvault had 18 users, a working product, but no growth funnel, no activation definition, and no retention tracking. They didn't want vanity signups, they wanted meaningful users.",
+    challenge: "No activation metric. No D1/D7 retention tracking. No event architecture. No paid experiment history. No funnel visibility. They were ready to market, but blind.",
     approach: [
-      "Funnel mapping — Awareness → Signup → Activation → Retention",
-      "Activation framework — D1/D7 retention, feature adoption, time-to-first-value",
-      "Tracking architecture — GA4 event mapping, custom conversion events, user-level tracking",
-      "30-day growth blueprint — measurement → controlled acquisition → retention optimization",
+      "Funnel mapping: Awareness → Signup → Activation → Retention",
+      "Activation framework: D1/D7 retention, feature adoption, time-to-first-value",
+      "Tracking architecture: GA4 event mapping, custom conversion events, user-level tracking",
+      "30-day growth blueprint: measurement → controlled acquisition → retention optimization",
     ],
     // TODO: real defined metric needed for Starrvault (removed 0% to 95% visibility stat)
     results: {
@@ -81,10 +81,10 @@ const caseStudies = [
     context: "Toral was entering online for the first time with a generic Shopify template, supplier-style product titles, no brand identity, no trust positioning, and no conversion logic.",
     challenge: "Running ads at this stage would burn capital. The store wasn't conversion-ready. Website graded 6.5/10 with major trust & conversion gaps.",
     approach: [
-      "Full website audit — identified trust & conversion gaps across the entire funnel",
-      "Homepage rebuild — benefit-driven hero, trust bar, bestseller prioritization",
-      "Branding upgrade — renamed 22 products, shifted positioning from reseller → D2C brand",
-      "Strategic 30-day roadmap — Phase 1: conversion fixes, Phase 2: controlled traffic",
+      "Full website audit: identified trust & conversion gaps across the entire funnel",
+      "Homepage rebuild: benefit-driven hero, trust bar, bestseller prioritization",
+      "Branding upgrade: renamed 22 products, shifted positioning from reseller → D2C brand",
+      "Strategic 30-day roadmap: Phase 1: conversion fixes, Phase 2: controlled traffic",
     ],
     results: {
       perception: { before: "Reseller", after: "D2C Brand" },
@@ -353,7 +353,7 @@ export default function CaseStudies() {
                 
                 <div className="relative z-10">
                   <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-                    Want to Be Our Next Success Story?
+                    have a similar problem? let's talk.
                   </h2>
                   <p className="text-muted-foreground text-lg mb-8">
                     Let's talk about your challenges. No pitch deck, no pressure. 

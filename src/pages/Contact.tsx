@@ -116,9 +116,7 @@ export default function Contact() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}>
-
-                Ready to{" "}
-                <span className="text-gradient-primary">Scale Smart?</span>
+                let's talk about your business.
               </motion.h1>
               
               <motion.p
@@ -126,9 +124,7 @@ export default function Contact() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}>
-
-                Whether you want a free audit, have questions, or are ready to work together, we're here. No gatekeeping. No forms that go nowhere.
-              
+                fill in the form or pick whichever channel suits you.
               </motion.p>
             </div>
           </div>

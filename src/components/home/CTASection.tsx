@@ -128,16 +128,13 @@ export function CTASection() {
 
             <AnimatedSection delay={0.2}>
               <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
-                Let's Build Your{" "}
-                <span className="text-primary">Growth Engine</span>
+                start with a free audit.
               </h2>
             </AnimatedSection>
 
             <AnimatedSection delay={0.3}>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-10">
-                Start with a free audit. We'll analyze your current setup and show 
-                you exactly where the opportunities are. No fluff. No sales pitch. 
-                Just data.
+                we'll review your tracking setup, ad performance and attribution. you'll leave with specific recommendations whether or not you work with us.
               </p>
             </AnimatedSection>
 
