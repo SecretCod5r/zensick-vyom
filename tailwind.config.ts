@@ -71,8 +71,9 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Space Grotesk', 'Inter', 'system-ui', 'sans-serif'],
+        sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
+        display: ['"Barlow Condensed"', 'sans-serif'],
+        serif: ['"Playfair Display"', 'serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
