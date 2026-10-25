@@ -161,18 +161,6 @@ export default function Services() {
 
           <div className="container mx-auto px-4 md:px-6 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
-              <motion.div
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 mb-6"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-              >
-                <Sparkles className="w-4 h-4 text-primary" />
-                <span className="text-sm uppercase tracking-wider text-primary font-semibold">
-                  Services
-                </span>
-              </motion.div>
-
               <motion.h1
                 className="font-display text-4xl md:text-6xl font-bold mb-6"
                 initial={{ opacity: 0, y: 20 }}
@@ -213,8 +201,8 @@ export default function Services() {
                   <div className={index % 2 === 1 ? "lg:order-2" : ""}>
                     <motion.div
                       className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-8 shadow-2xl`}
-                      whileHover={{ rotate: [0, -5, 5, 0], scale: 1.05 }}
-                      transition={{ duration: 0.5 }}
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.2 }}
                     >
                       <service.icon className="w-10 h-10 text-white" />
                     </motion.div>
@@ -301,16 +289,6 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <motion.div
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 mb-6"
-                whileHover={{ scale: 1.05 }}
-              >
-                <Sparkles className="w-4 h-4 text-primary" />
-                <span className="text-sm uppercase tracking-wider text-primary font-semibold">
-                  Essentials
-                </span>
-              </motion.div>
-
               <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
                 Every Client Gets
               </h2>
@@ -323,16 +301,12 @@ export default function Services() {
               {allPlansInclude.map((item, index) => (
                 <motion.div
                   key={item}
-                  className="relative bg-card/50 backdrop-blur-xl border border-primary/10 rounded-2xl p-5 text-center"
+                  className="relative bg-card/50 backdrop-blur-xl border border-primary/10 rounded-2xl p-5 text-center transition-colors hover:border-primary/30"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05 }}
-                  whileHover={{
-                    y: -5,
-                    borderColor: "hsl(8 83% 51% / 0.3)",
-                    boxShadow: "0 20px 40px -20px hsl(8 83% 51% / 0.2)",
-                  }}
+                  whileHover={{ y: -3 }}
                 >
                   <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center mx-auto mb-3">
                     <Check className="w-4 h-4 text-white" />
@@ -355,16 +329,6 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <motion.div
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 mb-6"
-                whileHover={{ scale: 1.05 }}
-              >
-                <Sparkles className="w-4 h-4 text-primary" />
-                <span className="text-sm uppercase tracking-wider text-primary font-semibold">
-                  Our Stack
-                </span>
-              </motion.div>
-
               <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
                 Tools We Use
               </h2>
@@ -384,12 +348,8 @@ export default function Services() {
                   transition={{ delay: index * 0.05 }}
                 >
                   <motion.div
-                    className="relative bg-card/50 backdrop-blur-xl border border-primary/10 rounded-2xl p-5 text-center h-full"
-                    whileHover={{
-                      y: -5,
-                      borderColor: "hsl(8 83% 51% / 0.3)",
-                      boxShadow: "0 20px 40px -20px hsl(8 83% 51% / 0.2)",
-                    }}
+                    className="relative bg-card/50 backdrop-blur-xl border border-primary/10 rounded-2xl p-5 text-center h-full transition-colors hover:border-primary/30"
+                    whileHover={{ y: -3 }}
                   >
                     <tool.icon className="w-7 h-7 text-primary mx-auto mb-3" />
                     <p className="font-semibold mb-1">{tool.name}</p>

@@ -64,11 +64,9 @@ export function Footer() {
             </p>
             {/* Red dot signature */}
             <div className="relative">
-              <motion.div 
+              <div 
                 className="w-1.5 h-1.5 rounded-full bg-primary opacity-50 mb-6" 
                 aria-hidden="true"
-                animate={{ scale: [1, 1.5, 1], opacity: [0.5, 0.8, 0.5] }}
-                transition={{ duration: 3, repeat: Infinity }}
               />
             </div>
             <div className="flex items-center gap-4">
@@ -78,7 +76,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="w-11 h-11 rounded-xl bg-card/50 backdrop-blur-xl border border-border/50 flex items-center justify-center hover:border-primary/50 hover:bg-primary/10 transition-all duration-300"
                 aria-label="LinkedIn"
-                whileHover={{ scale: 1.15, y: -3, rotate: 5 }}
+                whileHover={{ y: -3 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <svg className="w-5 h-5 text-foreground" fill="currentColor" viewBox="0 0 24 24">
@@ -91,7 +89,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="w-11 h-11 rounded-xl bg-card/50 backdrop-blur-xl border border-border/50 flex items-center justify-center hover:border-primary/50 hover:bg-primary/10 transition-all duration-300"
                 aria-label="Instagram"
-                whileHover={{ scale: 1.15, y: -3, rotate: -5 }}
+                whileHover={{ y: -3 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <svg className="w-5 h-5 text-foreground" fill="currentColor" viewBox="0 0 24 24">

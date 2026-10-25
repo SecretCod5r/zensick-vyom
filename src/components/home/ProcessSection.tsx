@@ -1,5 +1,4 @@
-import { motion } from "framer-motion";
-import { Search, TestTube, Brain, Rocket, Zap } from "lucide-react";
+import { Search, TestTube, Brain, Rocket } from "lucide-react";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { GridBackground, GlowOrb } from "@/components/ui/BackgroundEffects";
 import RadialOrbitalTimeline, { type TimelineItem } from "@/components/ui/radial-orbital-timeline";
@@ -64,15 +63,6 @@ export function ProcessSection() {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         {/* Header */}
         <AnimatedSection className="text-center max-w-2xl mx-auto mb-8">
-          <motion.div 
-            className="pill-gradient mb-4 inline-flex"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <Zap className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium">Our Process</span>
-          </motion.div>
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
             How We <span className="text-primary">Actually Work</span>
           </h2>
@@ -92,33 +82,25 @@ export function ProcessSection() {
           </div>
         </AnimatedSection>
 
-        {/* Bottom Stats */}
+        {/* Bottom Principles - Text-led horizontal layout with border dividers */}
         <AnimatedSection delay={0.4} className="mt-16 relative">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-y border-border/40 divide-y sm:divide-y-0 sm:divide-x divide-border/40 max-w-5xl mx-auto">
             {/* TODO: restore numbers only if backed by a test log and a GA4 or Events Manager export */}
             {[
               { label: "Consistent experimentation", value: "Structured testing before scaling" },
               { label: "Decision-grade data", value: "Custom event tracking for every client" },
               { label: "Scaled with confidence", value: "Only Proven Winners" },
               { label: "No blind spend", value: "Validated Scaling" },
-            ].map((stat, index) => (
-              <motion.div
+            ].map((stat) => (
+              <div
                 key={stat.label}
-                className="text-center p-6 rounded-xl bg-card/50 border border-border/50 backdrop-blur-sm"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 * index }}
-                whileHover={{ 
-                  scale: 1.05,
-                  borderColor: "hsl(8 83% 51% / 0.3)"
-                }}
+                className="p-6 text-left hover:bg-card/30 transition-colors"
               >
-                <div className="font-display text-lg md:text-xl font-bold text-primary mb-1">
+                <div className="font-display text-base md:text-lg font-bold text-foreground mb-1">
                   {stat.value}
                 </div>
                 <p className="text-xs md:text-sm text-muted-foreground">{stat.label}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
           {/* Red dot signature */}

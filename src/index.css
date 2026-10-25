@@ -417,9 +417,9 @@
   animation: orbit 20s linear infinite;
 }
 
-/* Custom scrollbar — red dot */
+/* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -428,11 +428,10 @@
 
 ::-webkit-scrollbar-thumb {
   background: hsl(8 83% 51%);
-  border-radius: 50%;
+  border-radius: 9999px;
   border: 2px solid hsl(230 20% 7%);
   background-clip: padding-box;
-  min-height: 10px;
-  max-height: 10px;
+  min-height: 40px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -450,4 +449,16 @@
 ::selection {
   background: hsl(8 83% 51% / 0.4);
   color: hsl(0 0% 100%);
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

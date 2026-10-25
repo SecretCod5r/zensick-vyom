@@ -8,7 +8,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { motion } from "framer-motion";
 import { Calendar, MessageCircle, Mail, ArrowRight, Clock, CheckCircle, Sparkles, Zap } from "lucide-react";
-import { GlowingEffect } from "@/components/ui/glowing-effect";
 import ProceduralGroundBackground from "@/components/ui/procedural-ground-background";
 
 const expectations = [
@@ -150,36 +149,21 @@ export default function Contact() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.1 }}
-                  className="relative group">
-
-                  <div className="relative rounded-2xl p-[1px]">
-                    <GlowingEffect
-                      spread={40}
-                      glow={true}
-                      disabled={false}
-                      proximity={80}
-                      inactiveZone={0.6}
-                      borderWidth={1} />
-
-                    <div className="relative bg-card/50 backdrop-blur-xl rounded-2xl p-6 border border-primary/10">
-                      <motion.div
-                        className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-4 shadow-lg shadow-primary/20"
-                        whileHover={{ rotate: [0, -10, 10, 0] }}>
-
-                        <Calendar className="w-7 h-7 text-white" />
-                      </motion.div>
-                      <h3 className="font-display text-xl font-bold mb-2">Book a Call</h3>
-                      <p className="text-muted-foreground text-sm mb-4">
-                        Schedule a 15-minute discovery call. We'll talk about your goals and see if there's a fit.
-                      </p>
-                      <a href="https://calendly.com/connect-zensick/discovery" target="_blank" rel="noopener noreferrer">
-                        <Button className="btn-shimmer w-full">
-                          Schedule Now
-                          <ArrowRight className="w-4 h-4" />
-                        </Button>
-                      </a>
-                    </div>
+                  whileHover={{ y: -3 }}
+                  className="relative group bg-card/50 backdrop-blur-xl rounded-2xl p-6 border border-primary/10 hover:border-primary/30 transition-all duration-300">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-4 shadow-lg shadow-primary/20">
+                    <Calendar className="w-7 h-7 text-white" />
                   </div>
+                  <h3 className="font-display text-xl font-bold mb-2">Book a Call</h3>
+                  <p className="text-muted-foreground text-sm mb-4">
+                    Schedule a 15-minute discovery call. We'll talk about your goals and see if there's a fit.
+                  </p>
+                  <a href="https://calendly.com/connect-zensick/discovery" target="_blank" rel="noopener noreferrer">
+                    <Button className="btn-shimmer w-full">
+                      Schedule Now
+                      <ArrowRight className="w-4 h-4" />
+                    </Button>
+                  </a>
                 </motion.div>
 
                 {/* WhatsApp */}
@@ -188,27 +172,25 @@ export default function Contact() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
-                  className="relative group">
-
-                  <div className="relative bg-card/50 backdrop-blur-xl rounded-2xl p-6 border border-green-500/20 hover:border-green-500/40 transition-all duration-300">
-                    <div className="w-14 h-14 rounded-2xl bg-green-500/20 flex items-center justify-center mb-4">
-                      <MessageCircle className="w-7 h-7 text-green-500" />
-                    </div>
-                    <h3 className="font-display text-xl font-bold mb-2">WhatsApp</h3>
-                    <p className="text-muted-foreground text-sm mb-4">
-                      Quick question? Prefer chat? Hit us up on WhatsApp for a faster response.
-                    </p>
-                    <a
-                      href="https://wa.link/phidzl"
-                      target="_blank"
-                      rel="noopener noreferrer">
-
-                      <Button variant="outline" className="w-full border-green-500/30 hover:border-green-500/60 hover:bg-green-500/10">
-                        Message Us
-                        <ArrowRight className="w-4 h-4" />
-                      </Button>
-                    </a>
+                  whileHover={{ y: -3 }}
+                  className="relative group bg-card/50 backdrop-blur-xl rounded-2xl p-6 border border-green-500/20 hover:border-green-500/40 transition-all duration-300">
+                  <div className="w-14 h-14 rounded-2xl bg-green-500/20 flex items-center justify-center mb-4">
+                    <MessageCircle className="w-7 h-7 text-green-500" />
                   </div>
+                  <h3 className="font-display text-xl font-bold mb-2">WhatsApp</h3>
+                  <p className="text-muted-foreground text-sm mb-4">
+                    Quick question? Prefer chat? Hit us up on WhatsApp for a faster response.
+                  </p>
+                  <a
+                    href="https://wa.link/phidzl"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    <Button variant="outline" className="w-full border-green-500/30 hover:border-green-500/60 hover:bg-green-500/10">
+                      Message Us
+                      <ArrowRight className="w-4 h-4" />
+                    </Button>
+                  </a>
                 </motion.div>
 
                 {/* Email */}
@@ -217,22 +199,20 @@ export default function Contact() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.3 }}
-                  className="relative group">
-
-                  <div className="relative bg-card/50 backdrop-blur-xl rounded-2xl p-6 border border-primary/10 hover:border-primary/30 transition-all duration-300">
-                    <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-4">
-                      <Mail className="w-7 h-7 text-primary" />
-                    </div>
-                    <h3 className="font-display text-xl font-bold mb-2">Email</h3>
-                    <p className="text-muted-foreground text-sm mb-4">
-                      Prefer email? We respond within 24 hours on business days.
-                    </p>
-                    <a href="mailto:connect@zensick.com">
-                      <Button variant="outline" className="w-full border-primary/30 hover:border-primary/60 hover:bg-primary/5">
-                        connect@zensick.com
-                      </Button>
-                    </a>
+                  whileHover={{ y: -3 }}
+                  className="relative group bg-card/50 backdrop-blur-xl rounded-2xl p-6 border border-primary/10 hover:border-primary/30 transition-all duration-300">
+                  <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-4">
+                    <Mail className="w-7 h-7 text-primary" />
                   </div>
+                  <h3 className="font-display text-xl font-bold mb-2">Email</h3>
+                  <p className="text-muted-foreground text-sm mb-4">
+                    Prefer email? We respond within 24 hours on business days.
+                  </p>
+                  <a href="mailto:connect@zensick.com">
+                    <Button variant="outline" className="w-full border-primary/30 hover:border-primary/60 hover:bg-primary/5">
+                      connect@zensick.com
+                    </Button>
+                  </a>
                 </motion.div>
                 </motion.div>
 
@@ -243,17 +223,7 @@ export default function Contact() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}>
 
-                <div className="relative rounded-3xl p-[1px]">
-                  <GlowingEffect
-                    spread={60}
-                    glow={true}
-                    disabled={false}
-                    proximity={100}
-                    inactiveZone={0.4}
-                    borderWidth={2} />
-
-                  
-                  <div className="relative bg-card/50 backdrop-blur-xl rounded-3xl p-8 border border-primary/10">
+                <div className="relative bg-card/50 backdrop-blur-xl rounded-3xl p-8 border border-primary/10">
                     <div className="flex items-center gap-3 mb-2">
                       <Zap className="w-5 h-5 text-primary" />
                       <h2 className="font-display text-2xl font-bold">
@@ -365,7 +335,6 @@ export default function Contact() {
                       </Button>
                     </form>
                   </div>
-                </div>
               </motion.div>
             </div>
           </div>
@@ -382,37 +351,35 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}>
 
-              <div className="relative rounded-3xl p-[1px]">
-                <div className="relative bg-card/50 backdrop-blur-xl rounded-3xl p-10 border border-primary/10">
-                  <div className="flex items-center gap-3 mb-8">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                      <Clock className="w-6 h-6 text-white" />
-                    </div>
-                    <h2 className="font-display text-2xl font-bold">
-                      What Happens Next?
-                    </h2>
+              <div className="relative bg-card/50 backdrop-blur-xl rounded-3xl p-10 border border-primary/10">
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                    <Clock className="w-6 h-6 text-white" />
                   </div>
-                  <ul className="space-y-5">
-                    {expectations.map((item, index) =>
-                    <motion.li
-                      key={index}
-                      className="flex items-start gap-4"
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.1 }}>
-
-                        <div className="w-7 h-7 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0 mt-0.5 shadow-lg shadow-primary/20">
-                          <CheckCircle className="w-4 h-4 text-white" />
-                        </div>
-                        <span className="text-muted-foreground text-lg">{item}</span>
-                      </motion.li>
-                    )}
-                  </ul>
-                  <p className="text-sm text-muted-foreground mt-8 pt-6 border-t border-border/50">
-                    We typically respond within 24 hours on business days. If it's urgent, WhatsApp is fastest.
-                  </p>
+                  <h2 className="font-display text-2xl font-bold">
+                    What Happens Next?
+                  </h2>
                 </div>
+                <ul className="space-y-5">
+                  {expectations.map((item, index) =>
+                  <motion.li
+                    key={index}
+                    className="flex items-start gap-4"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}>
+
+                      <div className="w-7 h-7 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0 mt-0.5 shadow-lg shadow-primary/20">
+                        <CheckCircle className="w-4 h-4 text-white" />
+                      </div>
+                      <span className="text-muted-foreground text-lg">{item}</span>
+                    </motion.li>
+                  )}
+                </ul>
+                <p className="text-sm text-muted-foreground mt-8 pt-6 border-t border-border/50">
+                  We typically respond within 24 hours on business days. If it's urgent, WhatsApp is fastest.
+                </p>
               </div>
             </motion.div>
           </div>

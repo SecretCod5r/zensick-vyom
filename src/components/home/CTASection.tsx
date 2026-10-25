@@ -115,30 +115,18 @@ export function CTASection() {
           
           <div className="relative z-10">
             <AnimatedSection delay={0.1}>
-              <motion.div 
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/8 border border-primary/20 mb-6"
-                whileHover={{ scale: 1.05 }}
-              >
-                <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                <span className="text-sm uppercase tracking-wider text-primary font-semibold">
-                  Ready to Scale?
-                </span>
-              </motion.div>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.2}>
               <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
                 start with a free audit.
               </h2>
             </AnimatedSection>
 
-            <AnimatedSection delay={0.3}>
+            <AnimatedSection delay={0.2}>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-10">
                 we'll review your tracking setup, ad performance and attribution. you'll leave with specific recommendations whether or not you work with us.
               </p>
             </AnimatedSection>
 
-            <AnimatedSection delay={0.4}>
+            <AnimatedSection delay={0.3}>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link to="/contact">
                   <MagnetizeButton 
@@ -158,10 +146,10 @@ export function CTASection() {
             </AnimatedSection>
 
             {/* Trust indicators */}
-            <AnimatedSection delay={0.5}>
+            <AnimatedSection delay={0.4}>
               <div className="flex items-center justify-center gap-6 mt-10 pt-8 border-t border-primary/10">
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                  <div className="w-2 h-2 rounded-full bg-primary" />
                   Free 30-minute consultation
                 </div>
                 <div className="hidden sm:block w-px h-4 bg-border" />

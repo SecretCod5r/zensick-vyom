@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
-import { Check, X, Zap } from "lucide-react";
+import { Check, X } from "lucide-react";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
-import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 const differences = [
   {
@@ -35,15 +34,6 @@ export function WhyDifferentSection() {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         {/* Header */}
         <AnimatedSection className="text-center max-w-2xl mx-auto mb-16">
-          <motion.div 
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/8 border border-primary/20 mb-6"
-            whileHover={{ scale: 1.05 }}
-          >
-            <Zap className="w-4 h-4 text-primary" />
-            <span className="text-sm uppercase tracking-wider text-primary font-semibold">
-              Why ZENSICK
-            </span>
-          </motion.div>
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
             how we work
           </h2>
@@ -54,18 +44,8 @@ export function WhyDifferentSection() {
 
         {/* Comparison Table */}
         <AnimatedSection className="max-w-3xl mx-auto" delay={0.2}>
-          <div className="relative rounded-3xl p-[1px]">
-            <GlowingEffect
-              spread={50}
-              glow={true}
-              disabled={false}
-              proximity={100}
-              inactiveZone={0.5}
-              borderWidth={2}
-            />
-            
-            <motion.div 
-              className="relative bg-card/50 backdrop-blur-xl rounded-3xl overflow-hidden border border-primary/10"
+          <motion.div 
+            className="relative bg-card/50 backdrop-blur-xl rounded-3xl overflow-hidden border border-border"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -99,12 +79,9 @@ export function WhyDifferentSection() {
                   transition={{ delay: 0.1 * index }}
                 >
                   <div className="flex items-start gap-3">
-                    <motion.div 
-                      className="w-7 h-7 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5"
-                      whileHover={{ scale: 1.2 }}
-                    >
+                    <div className="w-7 h-7 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Check className="w-4 h-4 text-white" />
-                    </motion.div>
+                    </div>
                     <span className="text-foreground font-medium">{diff.us}</span>
                   </div>
                   <div className="flex items-start gap-3">
@@ -116,7 +93,6 @@ export function WhyDifferentSection() {
                 </motion.div>
               ))}
             </motion.div>
-          </div>
         </AnimatedSection>
       </div>
     </section>

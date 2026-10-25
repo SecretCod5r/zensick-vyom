@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { ArrowRight, Target, PenTool, BarChart3, Globe, Lightbulb, Heart, Brain } from "lucide-react";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/ui/AnimatedSection";
 import { GlowOrb } from "@/components/ui/BackgroundEffects";
-import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 const services = [
   {
@@ -62,10 +61,6 @@ export function ServicesSection() {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         {/* Header */}
         <AnimatedSection className="text-center max-w-2xl mx-auto mb-16">
-          <span className="pill-gradient mb-4">
-            <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-            <span className="text-sm font-medium">What We Do</span>
-          </span>
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
             Six Verticals. <span className="text-primary">Done Right.</span>
           </h2>
@@ -80,34 +75,20 @@ export function ServicesSection() {
             <StaggerItem key={service.title}>
               <motion.div
                 className="relative h-full"
-                whileHover={{ y: -8, scale: 1.02 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                whileHover={{ y: -3 }}
+                transition={{ duration: 0.2 }}
               >
-                <div className="relative h-full rounded-xl p-[2px]">
-                  <GlowingEffect
-                    spread={40}
-                    glow={true}
-                    disabled={false}
-                    proximity={64}
-                    inactiveZone={0.01}
-                    borderWidth={2}
-                  />
-
-                  <div
-                    className={`relative h-full p-8 rounded-xl ${
-                      service.isHighlighted
-                        ? "bg-gradient-to-br from-primary/10 via-card to-card border border-primary/20"
-                        : "bg-card border border-border"
-                    }`}
-                  >
-                    <div className="relative z-10">
-                      <motion.div
-                        className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 bg-[#111114] border border-primary/30"
-                        whileHover={{ scale: 1.1, rotate: 5 }}
-                        transition={{ type: "spring", stiffness: 300 }}
-                      >
-                        <service.icon className="w-7 h-7 text-primary" />
-                      </motion.div>
+                <div
+                  className={`relative h-full p-8 rounded-xl transition-colors hover:border-primary/30 ${
+                    service.isHighlighted
+                      ? "bg-gradient-to-br from-primary/10 via-card to-card border border-primary/20"
+                      : "bg-card border border-border"
+                  }`}
+                >
+                  <div className="relative z-10">
+                    <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 bg-[#111114] border border-primary/30">
+                      <service.icon className="w-7 h-7 text-primary" />
+                    </div>
 
                       <h3 className="font-display text-xl font-bold mb-3 text-foreground">
                         {service.title}
@@ -147,7 +128,6 @@ export function ServicesSection() {
                       </Link>
                     </div>
                   </div>
-                </div>
               </motion.div>
             </StaggerItem>
           ))}

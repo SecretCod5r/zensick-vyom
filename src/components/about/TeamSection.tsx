@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { Users } from "lucide-react";
 import vyomImage from "@/assets/vyom-founder.jpeg";
 import ananyaImage from "@/assets/ananya-ojha.jpg";
@@ -40,16 +39,6 @@ export function TeamSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <motion.div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 mb-6"
-            whileHover={{ scale: 1.05 }}
-          >
-            <Users className="w-4 h-4 text-primary" />
-            <span className="text-sm uppercase tracking-wider text-primary font-semibold">
-              The Team
-            </span>
-          </motion.div>
-
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-foreground">
             Meet the People Behind{" "}
             <span className="text-gradient-primary">ZENSICK</span>
@@ -67,45 +56,33 @@ export function TeamSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="relative group"
+              whileHover={{ y: -3 }}
+              className="relative group bg-card rounded-2xl overflow-hidden border border-border hover:border-primary/30 transition-colors"
             >
-              <div className="relative rounded-2xl p-[1px]">
-                <GlowingEffect
-                  spread={40}
-                  glow={true}
-                  disabled={false}
-                  proximity={80}
-                  inactiveZone={0.6}
-                  borderWidth={1}
-                />
-
-                <div className="relative bg-card rounded-2xl overflow-hidden border border-border">
-                  <div className="aspect-[3/4] overflow-hidden">
-                    {member.image ? (
-                      <img
-                        src={member.image}
-                        alt={member.name}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                    ) : (
-                      <div className="w-full h-full bg-muted flex items-center justify-center">
-                        <span className="text-4xl font-display font-bold text-muted-foreground/40">
-                          {member.name.charAt(0)}
-                        </span>
-                      </div>
-                    )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
+              <div className="aspect-[3/4] overflow-hidden">
+                {member.image ? (
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-muted flex items-center justify-center">
+                    <span className="text-4xl font-display font-bold text-muted-foreground/40">
+                      {member.name.charAt(0)}
+                    </span>
                   </div>
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
+              </div>
 
-                  <div className="absolute bottom-0 left-0 right-0 p-5">
-                    <h3 className="font-display text-lg font-bold text-foreground">
-                      {member.name}
-                    </h3>
-                    <p className="text-sm text-primary font-medium">
-                      {member.role}
-                    </p>
-                  </div>
-                </div>
+              <div className="absolute bottom-0 left-0 right-0 p-5">
+                <h3 className="font-display text-lg font-bold text-foreground">
+                  {member.name}
+                </h3>
+                <p className="text-sm text-primary font-medium">
+                  {member.role}
+                </p>
               </div>
             </motion.div>
           ))}

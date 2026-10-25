@@ -56,7 +56,7 @@ function BlogCard({ post, index }: {post: typeof blogPosts[0];index: number;}) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.15 }}
-      whileHover={{ y: -8 }}
+      whileHover={{ y: -3 }}
       className="group">
       
       <Link to={`/blog/${post.slug}`} className="block">

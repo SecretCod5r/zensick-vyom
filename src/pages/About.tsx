@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Target, Zap, Eye, TrendingUp, Sparkles } from "lucide-react";
-import { GlowingEffect } from "@/components/ui/glowing-effect";
 import vyomImage from "@/assets/vyom-founder.jpeg";
 import zensickEmblem from "@/assets/zensick-emblem.png";
 import { TeamSection } from "@/components/about/TeamSection";
@@ -66,18 +65,6 @@ export default function About() {
           
           <div className="container mx-auto px-4 md:px-6 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
-              <motion.div 
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 mb-6"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-              >
-                <Sparkles className="w-4 h-4 text-primary" />
-                <span className="text-sm uppercase tracking-wider text-primary font-semibold">
-                  About ZENSICK
-                </span>
-              </motion.div>
-              
               <motion.h1 
                 className="font-display text-4xl md:text-6xl font-bold mb-6"
                 initial={{ opacity: 0, y: 20 }}
@@ -111,16 +98,6 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <motion.div 
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 mb-6"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <Zap className="w-4 h-4 text-primary" />
-                  <span className="text-sm uppercase tracking-wider text-primary font-semibold">
-                    The Vision
-                  </span>
-                </motion.div>
-                
                 <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
                   Why ZENSICK Exists
                 </h2>
@@ -155,18 +132,8 @@ export default function About() {
                 transition={{ duration: 0.6 }}
                 className="relative"
               >
-                <div className="relative rounded-3xl p-[1px]">
-                  <GlowingEffect
-                    spread={60}
-                    glow={true}
-                    disabled={false}
-                    proximity={100}
-                    inactiveZone={0.4}
-                    borderWidth={2}
-                  />
-                  
-                  <div className="relative bg-card/50 backdrop-blur-xl rounded-3xl p-10 border border-primary/10 overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
+                <div className="relative bg-card/50 backdrop-blur-xl rounded-3xl p-10 border border-border/60 hover:border-primary/30 transition-colors overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
                     
                     <div className="relative z-10">
                       <div className="text-center mb-10">
@@ -194,7 +161,6 @@ export default function About() {
                       </div>
                     </div>
                   </div>
-                </div>
               </motion.div>
             </div>
           </div>
@@ -229,37 +195,19 @@ export default function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="relative group"
+                  whileHover={{ y: -3 }}
+                  className="relative group bg-card rounded-2xl p-8 border border-border hover:border-primary/30 transition-colors h-full"
                 >
-                  <div className="relative rounded-2xl p-[1px]">
-                    <GlowingEffect
-                      spread={40}
-                      glow={true}
-                      disabled={false}
-                      proximity={80}
-                      inactiveZone={0.6}
-                      borderWidth={1}
-                    />
-                    
-                    <div className="relative bg-card rounded-2xl p-8 border border-border h-full">
-                      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
-                      
-                      <div className="relative z-10">
-                         <motion.div 
-                          className="w-14 h-14 rounded-2xl bg-[#111114] border border-primary/30 flex items-center justify-center mb-6"
-                          whileHover={{ rotate: [0, -10, 10, 0] }}
-                          transition={{ duration: 0.5 }}
-                        >
-                          <belief.icon className="w-7 h-7 text-primary-foreground" />
-                        </motion.div>
-                        <h3 className="font-display text-xl font-bold mb-3 text-foreground">
-                          {belief.title}
-                        </h3>
-                        <p className="text-muted-foreground leading-relaxed">
-                          {belief.description}
-                        </p>
-                      </div>
+                  <div className="relative z-10">
+                    <div className="w-14 h-14 rounded-2xl bg-[#111114] border border-primary/30 flex items-center justify-center mb-6">
+                      <belief.icon className="w-7 h-7 text-primary-foreground" />
                     </div>
+                    <h3 className="font-display text-xl font-bold mb-3 text-foreground">
+                      {belief.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {belief.description}
+                    </p>
                   </div>
                 </motion.div>
               ))}
@@ -363,16 +311,6 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <motion.div 
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 mb-6"
-                whileHover={{ scale: 1.05 }}
-              >
-                <TrendingUp className="w-4 h-4 text-primary" />
-                <span className="text-sm uppercase tracking-wider text-primary font-semibold">
-                  Where We're Going
-                </span>
-              </motion.div>
-              
               <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
                 The Long Game
               </h2>

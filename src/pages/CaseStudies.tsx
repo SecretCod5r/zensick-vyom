@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, TrendingUp, Target, BarChart3, Sparkles, Lightbulb } from "lucide-react";
-import { GlowingEffect } from "@/components/ui/glowing-effect";
 import ProceduralGroundBackground from "@/components/ui/procedural-ground-background";
 import AnimatedCardStack from "@/components/ui/animated-card-stack";
 import { ZoomParallaxSection } from "@/components/casestudies/ZoomParallaxSection";
@@ -116,18 +115,6 @@ export default function CaseStudies() {
           <div className="container mx-auto px-4 md:px-6 relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <motion.div 
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 mb-6"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.1 }}
-                >
-                  <Sparkles className="w-4 h-4 text-primary" />
-                  <span className="text-sm uppercase tracking-wider text-primary font-semibold">
-                    Case Studies
-                  </span>
-                </motion.div>
-                
                 <motion.h1 
                   className="font-display text-4xl md:text-5xl font-bold mb-6"
                   initial={{ opacity: 0, y: 20 }}
@@ -281,52 +268,41 @@ export default function CaseStudies() {
                       viewport={{ once: true }}
                       transition={{ delay: 0.2 }}
                     >
-                      <div className="relative rounded-3xl p-[1px] sticky top-32">
-                        <GlowingEffect
-                          spread={50}
-                          glow={true}
-                          disabled={false}
-                          proximity={100}
-                          inactiveZone={0.5}
-                          borderWidth={2}
-                        />
-                        
-                        <div className="relative bg-card/50 backdrop-blur-xl rounded-3xl p-8 border border-primary/10">
-                          <h3 className="font-display font-bold text-xl mb-8 flex items-center gap-3">
-                            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                              <TrendingUp className="w-5 h-5 text-white" />
-                            </div>
-                            What Changed
-                          </h3>
-                          <div className="space-y-6">
-                            {Object.entries(study.results).map(([key, value], i) => (
-                              <motion.div 
-                                key={key} 
-                                className="border-b border-border/30 pb-6 last:border-0 last:pb-0"
-                                initial={{ opacity: 0, y: 10 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: i * 0.1 }}
-                              >
-                                <p className="text-sm text-muted-foreground uppercase tracking-wider mb-3">
-                                  {key.replace(/([A-Z])/g, ' $1').trim()}
-                                </p>
-                                <div className="flex items-center gap-4">
-                                  {value.before ? (
-                                    <>
-                                      <span className="text-muted-foreground line-through text-lg">
-                                        {value.before}
-                                      </span>
-                                      <ArrowRight className="w-5 h-5 text-primary" />
-                                    </>
-                                  ) : null}
-                                  <span className="text-2xl font-display font-bold text-gradient-primary">
-                                    {value.after}
-                                  </span>
-                                </div>
-                              </motion.div>
-                            ))}
+                      <div className="relative sticky top-32 bg-card/50 backdrop-blur-xl rounded-3xl p-8 border border-border hover:border-primary/30 transition-colors">
+                        <h3 className="font-display font-bold text-xl mb-8 flex items-center gap-3">
+                          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                            <TrendingUp className="w-5 h-5 text-white" />
                           </div>
+                          What Changed
+                        </h3>
+                        <div className="space-y-6">
+                          {Object.entries(study.results).map(([key, value], i) => (
+                            <motion.div 
+                              key={key} 
+                              className="border-b border-border/30 pb-6 last:border-0 last:pb-0"
+                              initial={{ opacity: 0, y: 10 }}
+                              whileInView={{ opacity: 1, y: 0 }}
+                              viewport={{ once: true }}
+                              transition={{ delay: i * 0.1 }}
+                            >
+                              <p className="text-sm text-muted-foreground uppercase tracking-wider mb-3">
+                                {key.replace(/([A-Z])/g, ' $1').trim()}
+                              </p>
+                              <div className="flex items-center gap-4">
+                                {value.before ? (
+                                  <>
+                                    <span className="text-muted-foreground line-through text-lg">
+                                      {value.before}
+                                    </span>
+                                    <ArrowRight className="w-5 h-5 text-primary" />
+                                  </>
+                                ) : null}
+                                <span className="text-2xl font-display font-bold text-gradient-primary">
+                                  {value.after}
+                                </span>
+                              </div>
+                            </motion.div>
+                          ))}
                         </div>
                       </div>
                     </motion.div>

@@ -9,7 +9,6 @@ import { WavePath } from "@/components/ui/wave-path";
 import { motion } from "framer-motion";
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
-import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 const philosophy = [
   {
@@ -101,15 +100,10 @@ export default function Analytics() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2, type: "spring" }}
-              whileHover={{ scale: 1.05 }}
             >
-              <motion.div
-                animate={{ rotate: [0, 360] }}
-                transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-                style={{ willChange: "transform" }}
-              >
+              <div>
                 <BarChart3 className="w-4 h-4 text-primary" />
-              </motion.div>
+              </div>
               <span className="text-sm font-medium text-muted-foreground">
                 Flagship Capability
               </span>
@@ -157,34 +151,18 @@ export default function Analytics() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.15, duration: 0.5 }}
-                  whileHover={{ y: -8, transition: { duration: 0.3 } }}
-                  className="relative group"
+                  whileHover={{ y: -3, transition: { duration: 0.2 } }}
+                  className="relative group rounded-2xl glass-card p-8 border border-border hover:border-primary/30 transition-colors"
                 >
-                  <div className="relative rounded-2xl p-[1px]">
-                    <GlowingEffect
-                      spread={40}
-                      glow={true}
-                      disabled={false}
-                      proximity={80}
-                      inactiveZone={0.6}
-                      borderWidth={1}
-                    />
-                    <div className="relative glass-card p-8">
-                      <motion.div 
-                        className="w-14 h-14 rounded-2xl bg-[#111114] border border-primary/30 flex items-center justify-center mb-6"
-                        whileHover={{ rotate: [0, -10, 10, 0], scale: 1.1 }}
-                        transition={{ duration: 0.5 }}
-                      >
-                        <item.icon className="w-7 h-7 text-primary" />
-                      </motion.div>
-                      <h3 className="font-display text-xl font-bold mb-3">
-                        {item.title}
-                      </h3>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {item.description}
-                      </p>
-                    </div>
+                  <div className="w-14 h-14 rounded-2xl bg-[#111114] border border-primary/30 flex items-center justify-center mb-6">
+                    <item.icon className="w-7 h-7 text-primary" />
                   </div>
+                  <h3 className="font-display text-xl font-bold mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {item.description}
+                  </p>
                 </motion.div>
               ))}
             </div>
@@ -246,12 +224,9 @@ export default function Analytics() {
                       transition={{ delay: i * 0.1 }}
                       whileHover={{ x: 5 }}
                     >
-                      <motion.div
-                        whileHover={{ rotate: 360 }}
-                        transition={{ duration: 0.5 }}
-                      >
+                      <div>
                         <Zap className="w-5 h-5 text-primary mt-1" />
-                      </motion.div>
+                      </div>
                       <div>
                         <p className="font-medium">{item.title}</p>
                         <p className="text-sm text-muted-foreground">{item.desc}</p>
@@ -408,18 +383,17 @@ export default function Analytics() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.08 }}
-                  whileHover={{ y: -6, boxShadow: "0 20px 40px -20px hsl(8 83% 51% / 0.2)" }}
-                  className="glass-card p-6 cursor-default"
+                  whileHover={{ y: -3 }}
+                  className="glass-card p-6 cursor-default border border-border hover:border-primary/30 transition-colors"
                 >
                   <div className="flex items-center gap-3 mb-3">
-                    <motion.div 
+                    <div 
                       className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center"
-                      whileHover={{ scale: 1.15, backgroundColor: "hsl(8 83% 51% / 0.2)" }}
                     >
                       <span className="font-display font-bold text-primary text-sm">
                         {kpi.name.substring(0, 2)}
                       </span>
-                    </motion.div>
+                    </div>
                     <div>
                       <p className="font-display font-bold">{kpi.name}</p>
                       <p className="text-xs text-muted-foreground">{kpi.description}</p>
