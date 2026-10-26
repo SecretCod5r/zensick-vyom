@@ -40,8 +40,11 @@ export function TeamSection() {
           viewport={{ once: true }}
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-foreground">
-            Meet the People Behind{" "}
-            <span className="text-gradient-primary">ZENSICK</span>
+            THE PEOPLE{" "}
+            <span className="font-serif italic text-muted-foreground/90">
+              behind
+            </span>{" "}
+            <span className="text-primary">ZENSICK.</span>
           </h2>
           <p className="text-muted-foreground text-lg">
             A lean, hungry team building the agency we wish existed.

@@ -109,12 +109,16 @@ export default function Analytics() {
               </span>
             </motion.div>
             <motion.h1 
-              className="font-display text-4xl md:text-6xl font-bold mb-6 text-foreground"
+              className="font-display text-4xl md:text-6xl font-bold leading-[1.08] mb-6 text-foreground"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
             >
-              Analytics &{" "}<span className="text-gradient">Intelligence</span>
+              ANALYTICS &{" "}
+              <span className="font-serif italic text-muted-foreground/90 block my-2 text-3xl md:text-5xl">
+                actionable
+              </span>{" "}
+              <span className="text-primary">INTELLIGENCE.</span>
             </motion.h1>
             <motion.p 
               className="text-lg text-muted-foreground mb-8"
@@ -199,7 +203,11 @@ export default function Analytics() {
                   Attribution
                 </motion.span>
                 <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
-                  No Perfect Model. Just Practical Decisions.
+                  NO PERFECT MODEL.{" "}
+                  <span className="font-serif italic text-muted-foreground/90">
+                    just practical
+                  </span>{" "}
+                  <span className="text-primary">DECISIONS.</span>
                 </h2>
                 <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
                   Let's be real: iOS broke a lot of attribution. Platform numbers are inflated. Last-click is incomplete. Multi-touch is complex.
@@ -368,7 +376,11 @@ export default function Analytics() {
               viewport={{ once: true }}
             >
               <h2 className="font-display text-3xl font-bold mb-4">
-                KPIs we track
+                KPIS WE{" "}
+                <span className="font-serif italic text-muted-foreground/90">
+                  actually
+                </span>{" "}
+                <span className="text-primary">TRACK.</span>
               </h2>
               <p className="text-muted-foreground">
                 Not impressions. Not reach. Real metrics that tie to revenue.
@@ -431,7 +443,11 @@ export default function Analytics() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
                 >
-                  Want to See Your Real Numbers?
+                  WANT TO SEE{" "}
+                  <span className="font-serif italic text-muted-foreground/90">
+                    your real
+                  </span>{" "}
+                  <span className="text-primary">NUMBERS?</span>
                 </motion.h2>
                 <motion.p 
                   className="text-muted-foreground mb-8"

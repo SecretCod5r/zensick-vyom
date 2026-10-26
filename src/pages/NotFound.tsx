@@ -38,7 +38,11 @@ const NotFound = () => {
               className="-mt-12 md:-mt-16"
             >
               <h1 className="font-display text-3xl md:text-5xl font-bold mb-4">
-                Page Not <span className="text-gradient-primary">Found</span>
+                PAGE NOT{" "}
+                <span className="font-serif italic text-muted-foreground/90">
+                  quite
+                </span>{" "}
+                <span className="text-primary">FOUND.</span>
               </h1>
               <p className="text-muted-foreground text-lg mb-8 max-w-md mx-auto">
                 The page you're looking for doesn't exist or has been moved.

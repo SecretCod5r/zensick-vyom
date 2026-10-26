@@ -64,7 +64,7 @@ export function TestimonialCard({
         alt={`Avatar of ${author}`}
         className="pointer-events-none mx-auto h-32 w-32 rounded-full border-2 border-primary/40 bg-muted object-cover"
       />
-      <span className="text-center text-lg italic text-foreground/80">
+      <span className="text-center text-lg font-serif italic text-foreground/90">
         "{testimonial}"
       </span>
       <div className="text-center">

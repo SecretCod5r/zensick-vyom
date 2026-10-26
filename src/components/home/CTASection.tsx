@@ -116,7 +116,11 @@ export function CTASection() {
           <div className="relative z-10">
             <AnimatedSection delay={0.1}>
               <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
-                start with a free audit.
+                START WITH{" "}
+                <span className="font-serif italic text-muted-foreground/90">
+                  our
+                </span>{" "}
+                <span className="text-primary">FREE AUDIT.</span>
               </h2>
             </AnimatedSection>
 

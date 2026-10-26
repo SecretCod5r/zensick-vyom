@@ -162,12 +162,16 @@ export default function Services() {
           <div className="container mx-auto px-4 md:px-6 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <motion.h1
-                className="font-display text-4xl md:text-6xl font-bold mb-6"
+                className="font-display text-4xl md:text-6xl font-bold leading-[1.08] mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
               >
-                everything we do, how we do it, and what you get.
+                EVERYTHING WE DO,{" "}
+                <span className="font-serif italic text-muted-foreground/90 block my-2 text-3xl md:text-5xl">
+                  how we do it,
+                </span>{" "}
+                AND WHAT YOU <span className="text-primary">GET.</span>
               </motion.h1>
 
               <motion.p
@@ -290,7 +294,11 @@ export default function Services() {
               viewport={{ once: true }}
             >
               <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-                Every Client Gets
+                EVERY CLIENT{" "}
+                <span className="font-serif italic text-muted-foreground/90">
+                  always
+                </span>{" "}
+                <span className="text-primary">GETS.</span>
               </h2>
               <p className="text-muted-foreground text-lg">
                 3 month minimum on single service retainers, 6 months on bundles, 30 days written notice to cancel.
@@ -330,7 +338,11 @@ export default function Services() {
               viewport={{ once: true }}
             >
               <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-                Tools We Use
+                TOOLS WE{" "}
+                <span className="font-serif italic text-muted-foreground/90">
+                  rely on and
+                </span>{" "}
+                <span className="text-primary">USE.</span>
               </h2>
               <p className="text-muted-foreground text-lg">
                 Industry-standard platforms. No proprietary black boxes.
@@ -385,7 +397,11 @@ export default function Services() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.1 }}
                   >
-                    Not Sure Which Service You Need?
+                    NOT SURE{" "}
+                    <span className="font-serif italic text-muted-foreground/90">
+                      which service
+                    </span>{" "}
+                    YOU <span className="text-primary">NEED?</span>
                   </motion.h2>
                   <motion.p
                     className="text-muted-foreground text-lg mb-8"

@@ -35,7 +35,11 @@ export function WhyDifferentSection() {
         {/* Header */}
         <AnimatedSection className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
-            how we work
+            HOW WE WORK{" "}
+            <span className="font-serif italic text-muted-foreground/90">
+              in direct
+            </span>{" "}
+            <span className="text-primary">COMPARISON.</span>
           </h2>
           <p className="text-muted-foreground text-lg">
             a direct comparison between our approach and common agency practices.

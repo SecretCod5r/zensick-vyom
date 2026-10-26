@@ -60,10 +60,13 @@ export function HeroSection() {
 
             {/* Headline */}
             <AnimatedSection delay={0.1}>
-              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                We Don't Guess.{" "}
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.08] mb-6">
+                WE DON'T GUESS.{" "}
+                <span className="font-serif italic text-muted-foreground/90 block my-1 text-3xl md:text-4xl lg:text-5xl">
+                  we
+                </span>
                 <span className="text-primary">
-                  We Predict.
+                  PREDICT.
                 </span>
               </h1>
             </AnimatedSection>

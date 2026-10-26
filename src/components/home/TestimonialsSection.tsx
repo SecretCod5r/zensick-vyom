@@ -42,7 +42,11 @@ export function TestimonialsSection() {
           </motion.div>
 
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
-            what clients say
+            WHAT CLIENTS{" "}
+            <span className="font-serif italic text-muted-foreground/90">
+              actually
+            </span>{" "}
+            <span className="text-primary">SAY.</span>
           </h2>
           
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">See why D2C brands choose ZENSICK for their marketing and analytics needs.</p>

@@ -64,7 +64,11 @@ export function ProcessSection() {
         {/* Header */}
         <AnimatedSection className="text-center max-w-2xl mx-auto mb-8">
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
-            How We <span className="text-primary">Actually Work</span>
+            HOW WE{" "}
+            <span className="font-serif italic text-muted-foreground/90">
+              actually
+            </span>{" "}
+            <span className="text-primary">WORK.</span>
           </h2>
           <p className="text-muted-foreground text-lg">
             a four step process we use on every engagement. each step produces evidence before we move on.

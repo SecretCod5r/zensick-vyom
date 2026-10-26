@@ -116,13 +116,16 @@ export default function CaseStudies() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <motion.h1 
-                  className="font-display text-4xl md:text-5xl font-bold mb-6"
+                  className="font-display text-4xl md:text-5xl font-bold leading-[1.08] mb-6"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
                 >
-                  Thought Process Over{" "}
-                  <span className="text-gradient-primary">Vanity Metrics</span>
+                  REAL WORK,{" "}
+                  <span className="font-serif italic text-muted-foreground/90 block my-2 text-3xl md:text-4xl">
+                    delivering
+                  </span>{" "}
+                  REAL <span className="text-primary">IMPACT.</span>
                 </motion.h1>
                 
                 <motion.p 
@@ -256,7 +259,7 @@ export default function CaseStudies() {
                             <Lightbulb className="w-5 h-5" />
                             Key Insight
                           </h3>
-                          <p className="text-muted-foreground italic text-lg">"{study.insight}"</p>
+                          <p className="text-muted-foreground font-serif italic text-lg">"{study.insight}"</p>
                         </div>
                       </div>
                     </div>

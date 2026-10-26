@@ -57,7 +57,11 @@ export function SocialProofSection() {
         {/* Interactive Icon Cloud */}
         <AnimatedSection className="text-center relative">
           <h3 className="font-display text-2xl md:text-3xl font-bold mb-3">
-            Systems We Build & Manage
+            SYSTEMS WE BUILD{" "}
+            <span className="font-serif italic text-muted-foreground/90">
+              and
+            </span>{" "}
+            <span className="text-primary">MANAGE.</span>
           </h3>
           <p className="text-muted-foreground text-sm mb-6 max-w-md mx-auto">
             This is the stack we use to track revenue, attribution, and scale profitably.

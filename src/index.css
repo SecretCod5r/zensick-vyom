@@ -101,8 +101,11 @@
 
   .font-serif,
   .font-editorial {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', Georgia, serif;
     font-style: italic;
+    text-transform: none;
+    font-weight: 400;
+    letter-spacing: normal;
   }
 
   .font-body {

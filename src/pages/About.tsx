@@ -66,12 +66,16 @@ export default function About() {
           <div className="container mx-auto px-4 md:px-6 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <motion.h1 
-                className="font-display text-4xl md:text-6xl font-bold mb-6"
+                className="font-display text-4xl md:text-6xl font-bold leading-[1.08] mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
               >
-                a small team building an honest marketing company.
+                A SMALL TEAM{" "}
+                <span className="font-serif italic text-muted-foreground/90 block my-2 text-3xl md:text-5xl">
+                  building an
+                </span>{" "}
+                <span className="text-primary">HONEST MARKETING COMPANY.</span>
               </motion.h1>
               
               <motion.p 
@@ -99,7 +103,11 @@ export default function About() {
                 transition={{ duration: 0.6 }}
               >
                 <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
-                  Why ZENSICK Exists
+                  WHY ZENSICK{" "}
+                  <span className="font-serif italic text-muted-foreground/90">
+                    actually
+                  </span>{" "}
+                  <span className="text-primary">EXISTS.</span>
                 </h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
@@ -182,7 +190,11 @@ export default function About() {
               viewport={{ once: true }}
             >
               <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-foreground">
-                What We Believe
+                CORE BELIEFS{" "}
+                <span className="font-serif italic text-muted-foreground/90">
+                  we
+                </span>{" "}
+                <span className="text-primary">LIVE BY.</span>
               </h2>
               <p className="text-muted-foreground text-lg">
                 These aren't just words on a page. They're the filter through which 
@@ -233,8 +245,11 @@ export default function About() {
               viewport={{ once: true }}
             >
               <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-foreground">
-                A Message From the Guy Behind{" "}
-                <span className="text-gradient-primary">ZENSICK</span>
+                A MESSAGE{" "}
+                <span className="font-serif italic text-muted-foreground/90">
+                  from the founder of
+                </span>{" "}
+                <span className="text-primary">ZENSICK.</span>
               </h2>
             </motion.div>
 
@@ -315,7 +330,11 @@ export default function About() {
               viewport={{ once: true }}
             >
               <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
-                The Long Game
+                BUILDING FOR{" "}
+                <span className="font-serif italic text-muted-foreground/90">
+                  the
+                </span>{" "}
+                <span className="text-primary">LONG GAME.</span>
               </h2>
               <div className="text-muted-foreground text-lg leading-relaxed space-y-4">
                 <p>
@@ -351,7 +370,11 @@ export default function About() {
                 
                 <div className="relative z-10">
                   <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-                    Like What You See?
+                    LIKE WHAT{" "}
+                    <span className="font-serif italic text-muted-foreground/90">
+                      you
+                    </span>{" "}
+                    <span className="text-primary">SEE?</span>
                   </h2>
                   <p className="text-muted-foreground text-lg mb-8">
                     If this sounds like the kind of company you want to work with, 

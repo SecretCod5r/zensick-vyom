@@ -62,7 +62,11 @@ export function ServicesSection() {
         {/* Header */}
         <AnimatedSection className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
-            Six Verticals. <span className="text-primary">Done Right.</span>
+            SIX VERTICALS.{" "}
+            <span className="font-serif italic text-muted-foreground/90">
+              done
+            </span>{" "}
+            <span className="text-primary">RIGHT.</span>
           </h2>
           <p className="text-muted-foreground text-lg">
             strategy, creative, performance, CRM, analytics and development, built to work together.

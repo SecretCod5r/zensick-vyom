@@ -99,11 +99,15 @@ export default function Contact() {
           <div className="container mx-auto px-4 md:px-6 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <motion.h1
-                className="font-display text-4xl md:text-6xl font-bold mb-6"
+                className="font-display text-4xl md:text-6xl font-bold leading-[1.08] mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}>
-                let's talk about your business.
+                LET'S TALK{" "}
+                <span className="font-serif italic text-muted-foreground/90 block my-2 text-3xl md:text-5xl">
+                  about your
+                </span>{" "}
+                <span className="text-primary">BUSINESS.</span>
               </motion.h1>
               
               <motion.p
@@ -215,7 +219,11 @@ export default function Contact() {
                     <div className="flex items-center gap-3 mb-2">
                       <Zap className="w-5 h-5 text-primary" />
                       <h2 className="font-display text-2xl font-bold">
-                        Send Us a Message
+                        SEND US{" "}
+                        <span className="font-serif italic text-muted-foreground/90">
+                          a direct
+                        </span>{" "}
+                        <span className="text-primary">MESSAGE.</span>
                       </h2>
                     </div>
                     <p className="text-muted-foreground mb-8">
@@ -345,7 +353,11 @@ export default function Contact() {
                     <Clock className="w-6 h-6 text-white" />
                   </div>
                   <h2 className="font-display text-2xl font-bold">
-                    What Happens Next?
+                    WHAT HAPPENS{" "}
+                    <span className="font-serif italic text-muted-foreground/90">
+                      right
+                    </span>{" "}
+                    <span className="text-primary">NEXT?</span>
                   </h2>
                 </div>
                 <ul className="space-y-5">
