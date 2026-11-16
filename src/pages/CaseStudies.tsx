@@ -97,13 +97,43 @@ const caseStudies = [
 
 import { SEO } from "@/components/seo/SEO";
 
+const caseStudiesSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "D2C Case Studies & Growth Results | ZENSICK",
+    "description": "Real case studies showing how ZENSICK scales D2C brands through performance marketing, attribution restructuring, and conversion optimization.",
+    "url": "https://zensick.com/case-studies"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://zensick.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Case Studies",
+        "item": "https://zensick.com/case-studies"
+      }
+    ]
+  }
+];
+
 export default function CaseStudies() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="D2C Case Studies & Marketing Results" 
-        description="See how we've helped D2C brands scale from scratch, restructure their analytics, and achieve measurable ROAS. Real problems, real results."
+        title="D2C Case Studies & Marketing Results | Proven Client Growth" 
+        description="See how we've helped D2C brands scale from scratch, restructure analytics, and achieve profitable ROAS. Real case studies, real data, verifiable results."
         canonicalUrl="https://zensick.com/case-studies"
+        keywords="D2C case studies, performance marketing results, e-commerce growth case study, ROAS improvement, CAC reduction, StarrVault, Tanish Creation, Vyre"
+        schema={caseStudiesSchema}
       />
       <Navbar />
       <main className="pt-24">

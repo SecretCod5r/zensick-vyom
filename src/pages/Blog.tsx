@@ -120,13 +120,48 @@ function BlogCard({ post, index }: {post: typeof blogPosts[0];index: number;}) {
 
 import { SEO } from "@/components/seo/SEO";
 
+const blogSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "The ZENSICK Blog | Growth & Analytics Insights",
+    "description": "Deep dives into digital strategy, analytics, and growth marketing. Learn from our experiences scaling brands through data-driven decisions.",
+    "url": "https://zensick.com/blog",
+    "publisher": {
+      "@type": "Organization",
+      "name": "ZENSICK",
+      "url": "https://zensick.com"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://zensick.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://zensick.com/blog"
+      }
+    ]
+  }
+];
+
 export default function Blog() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Growth Blog | Digital Strategy & Analytics Insights" 
-        description="Read the latest insights on digital growth strategy, analytics, performance marketing, and data-driven decision making from ZENSICK."
-        canonicalUrl="https://www.zensick.com/blog"
+        title="Growth Blog | Digital Strategy, Analytics & Performance Marketing" 
+        description="Read the latest insights on digital growth strategy, analytics, performance marketing, and data-driven decision making from the ZENSICK team."
+        canonicalUrl="https://zensick.com/blog"
+        keywords="growth marketing blog, marketing analytics articles, e-commerce growth strategies, ROAS optimization tips, paid ad automation"
+        schema={blogSchema}
       />
       <Navbar />
       

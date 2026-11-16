@@ -1,10 +1,25 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { motion } from "framer-motion";
+import { SEO } from "@/components/seo/SEO";
+
+const termsSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Terms of Service | ZENSICK",
+  "url": "https://zensick.com/terms-of-service",
+  "description": "ZENSICK Terms of Service governing performance marketing and digital growth services."
+};
 
 export default function TermsOfService() {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO 
+        title="Terms of Service"
+        description="Review the ZENSICK Terms of Service governing our performance marketing, analytics, creative, and digital growth services."
+        canonicalUrl="https://zensick.com/terms-of-service"
+        schema={termsSchema}
+      />
       <Navbar />
 
       <main className="pt-32 pb-24">
@@ -151,8 +166,8 @@ export default function TermsOfService() {
                 <p className="mt-4 text-muted-foreground">
                   <strong className="text-foreground">ZENSICK</strong><br />
                   Email:{" "}
-                  <a href="mailto:connect@zensick.com" className="text-primary hover:underline">
-                    connect@zensick.com
+                  <a href="mailto:connect@zensick.in" className="text-primary hover:underline">
+                    connect@zensick.in
                   </a>
                 </p>
               </section>

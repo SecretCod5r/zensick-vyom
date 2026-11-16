@@ -252,14 +252,73 @@ export default function BlogPost() {
   }
 
   const Icon = post.icon;
+  const canonicalUrl = `https://zensick.com/blog/${slug}`;
+
+  const articleSchema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": post.title,
+      "description": post.excerpt,
+      "image": post.image,
+      "author": {
+        "@type": "Organization",
+        "name": post.author,
+        "url": "https://zensick.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ZENSICK",
+        "url": "https://zensick.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://zensick.com/favicon.png"
+        }
+      },
+      "datePublished": "2026-01-20",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": canonicalUrl
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://zensick.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://zensick.com/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": post.title,
+          "item": canonicalUrl
+        }
+      ]
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title={`${post.title}`}
+        title={post.title}
         description={post.excerpt}
-        canonicalUrl={`https://zensick.com/blog/${slug}`}
+        canonicalUrl={canonicalUrl}
         ogType="article"
+        ogImage={post.image}
+        ogImageAlt={post.title}
+        author={post.author}
+        section={post.category}
+        schema={articleSchema}
       />
       <Navbar />
       

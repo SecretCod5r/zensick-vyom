@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowLeft, Home } from "lucide-react";
+import { SEO } from "@/components/seo/SEO";
 
 const NotFound = () => {
   const location = useLocation();
@@ -15,6 +16,12 @@ const NotFound = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Page Not Found"
+        description="The requested page could not be found on ZENSICK."
+        canonicalUrl="https://zensick.com/404"
+        noindex={true}
+      />
       <Navbar />
       <main className="pt-24">
         <section className="min-h-[70vh] flex items-center justify-center relative overflow-hidden">

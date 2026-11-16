@@ -1,10 +1,25 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { motion } from "framer-motion";
+import { SEO } from "@/components/seo/SEO";
+
+const privacySchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Privacy Policy | ZENSICK",
+  "url": "https://zensick.com/privacy-policy",
+  "description": "ZENSICK's privacy policy outlining data collection, usage, and protection practices."
+};
 
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO 
+        title="Privacy Policy"
+        description="Read ZENSICK's Privacy Policy to understand how we collect, use, and protect your personal and business data across our website and marketing services."
+        canonicalUrl="https://zensick.com/privacy-policy"
+        schema={privacySchema}
+      />
       <Navbar />
 
       <main className="pt-32 pb-24">
@@ -115,8 +130,8 @@ export default function PrivacyPolicy() {
                 </ul>
                 <p className="mt-4">
                   To exercise any of these rights, contact us at{" "}
-                  <a href="mailto:connect@zensick.com" className="text-primary hover:underline">
-                    connect@zensick.com
+                  <a href="mailto:connect@zensick.in" className="text-primary hover:underline">
+                    connect@zensick.in
                   </a>.
                 </p>
               </section>
@@ -143,8 +158,8 @@ export default function PrivacyPolicy() {
                 <p className="mt-4 text-muted-foreground">
                   <strong className="text-foreground">ZENSICK</strong><br />
                   Email:{" "}
-                  <a href="mailto:connect@zensick.com" className="text-primary hover:underline">
-                    connect@zensick.com
+                  <a href="mailto:connect@zensick.in" className="text-primary hover:underline">
+                    connect@zensick.in
                   </a>
                 </p>
               </section>

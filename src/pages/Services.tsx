@@ -135,22 +135,60 @@ const tools: { name: string; category: string; icon: LucideIcon }[] = [
 
 import { SEO } from "@/components/seo/SEO";
 
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "ZENSICK Services",
-  "url": "https://zensick.com/services",
-  "description": "ZENSICK digital growth services: strategy, creative, performance marketing, CRM, analytics, and web development.",
-};
+const servicesSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "360° Digital Growth Services",
+    "provider": {
+      "@type": "Organization",
+      "name": "ZENSICK",
+      "url": "https://zensick.com"
+    },
+    "description": "Integrated performance marketing, creative ad production, revenue attribution, CRM retention, and conversion-first web development.",
+    "url": "https://zensick.com/services",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Digital Growth Verticals",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Marketing Strategy" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Creative + Content Ad Production" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Performance Marketing (Meta & Google Ads)" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "CRM & Customer Retention" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Analytics & Attribution Intelligence" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Development & SEO" } }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://zensick.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://zensick.com/services"
+      }
+    ]
+  }
+];
 
 export default function Services() {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Services | 360° Digital Growth"
-        description="Strategy-first, analytics-driven digital growth. Marketing strategy, creative + content, performance marketing, CRM & retention, analytics & intelligence, and web development."
-        canonicalUrl="https://www.zensick.com/services"
-        schema={schema}
+        title="Services | 360° Digital Growth & Performance Marketing"
+        description="Strategy-first, analytics-driven digital growth. Marketing strategy, creative ad production, performance marketing, CRM retention, analytics, and web development."
+        canonicalUrl="https://zensick.com/services"
+        keywords="growth marketing services, performance marketing agency, Meta ads management, Google ads agency, D2C creative agency, marketing attribution, web development"
+        schema={servicesSchema}
       />
       <Navbar />
       <main className="pt-24">

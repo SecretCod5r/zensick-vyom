@@ -77,13 +77,49 @@ function DashboardPie({ title, data }: { title: string; data: { name: string; va
 
 import { SEO } from "@/components/seo/SEO";
 
+const analyticsSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Analytics & Actionable Intelligence",
+    "provider": {
+      "@type": "Organization",
+      "name": "ZENSICK",
+      "url": "https://zensick.com"
+    },
+    "serviceType": "Marketing Analytics & Attribution",
+    "description": "Advanced GA4 architecture, Meta Pixel with CAPI, conversion tracking, custom Looker Studio dashboards, and full-funnel attribution.",
+    "url": "https://zensick.com/analytics"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://zensick.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Analytics",
+        "item": "https://zensick.com/analytics"
+      }
+    ]
+  }
+];
+
 export default function Analytics() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Analytics & Intelligence | Our Flagship Capability" 
-        description="Every decision backed by data. Advanced GA4 architecture, Meta Pixel with CAPI, conversion tracking, and actionable dashboards for perfect attribution."
-        canonicalUrl="https://www.zensick.com/analytics"
+        title="Analytics & Intelligence | Actionable Marketing Dashboards" 
+        description="Every decision backed by data. Advanced GA4 architecture, Meta Pixel with CAPI, conversion tracking, and custom Looker Studio dashboards for true attribution."
+        canonicalUrl="https://zensick.com/analytics"
+        keywords="marketing analytics, GA4 setup, Meta CAPI, conversion tracking, Looker Studio dashboards, ROAS tracking, attribution modeling, CAC analysis"
+        schema={analyticsSchema}
       />
       <Navbar />
       <main className="pt-24">

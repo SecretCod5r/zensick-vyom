@@ -1,16 +1,11 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
+# Robots.txt for ZENSICK
+# https://zensick.com
 
 User-agent: *
 Allow: /
 
+# Host
+Host: https://zensick.com
+
+# Sitemap
 Sitemap: https://zensick.com/sitemap.xml
