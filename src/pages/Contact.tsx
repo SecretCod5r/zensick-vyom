@@ -87,7 +87,7 @@ const contactSchema = [
     "@context": "https://schema.org",
     "@type": "ContactPage",
     "name": "Contact ZENSICK",
-    "url": "https://zensick.com/contact",
+    "url": "https://www.zensick.in/contact",
     "description": "Book a free digital growth and analytics audit with ZENSICK."
   },
   {
@@ -98,13 +98,13 @@ const contactSchema = [
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://zensick.com/"
+        "item": "https://www.zensick.in/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Contact",
-        "item": "https://zensick.com/contact"
+        "item": "https://www.zensick.in/contact"
       }
     ]
   }
@@ -115,7 +115,7 @@ const contactSchema = [
       <SEO
         title="Contact Us | Book a Free Growth & Analytics Audit"
         description="Ready to scale your brand? Contact ZENSICK for a free growth audit. Let's discuss your marketing strategy, analytics setup, and digital scaling roadmap."
-        canonicalUrl="https://zensick.com/contact"
+        canonicalUrl="https://www.zensick.in/contact"
         keywords="contact ZENSICK, book marketing audit, D2C strategy call, hire performance marketing agency, Delhi growth agency"
         schema={contactSchema}
       />

@@ -126,11 +126,11 @@ const blogSchema = [
     "@type": "Blog",
     "name": "The ZENSICK Blog | Growth & Analytics Insights",
     "description": "Deep dives into digital strategy, analytics, and growth marketing. Learn from our experiences scaling brands through data-driven decisions.",
-    "url": "https://zensick.com/blog",
+    "url": "https://www.zensick.in/blog",
     "publisher": {
       "@type": "Organization",
       "name": "ZENSICK",
-      "url": "https://zensick.com"
+      "url": "https://www.zensick.in"
     }
   },
   {
@@ -141,13 +141,13 @@ const blogSchema = [
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://zensick.com/"
+        "item": "https://www.zensick.in/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Blog",
-        "item": "https://zensick.com/blog"
+        "item": "https://www.zensick.in/blog"
       }
     ]
   }
@@ -159,7 +159,7 @@ export default function Blog() {
       <SEO 
         title="Growth Blog | Digital Strategy, Analytics & Performance Marketing" 
         description="Read the latest insights on digital growth strategy, analytics, performance marketing, and data-driven decision making from the ZENSICK team."
-        canonicalUrl="https://zensick.com/blog"
+        canonicalUrl="https://www.zensick.in/blog"
         keywords="growth marketing blog, marketing analytics articles, e-commerce growth strategies, ROAS optimization tips, paid ad automation"
         schema={blogSchema}
       />

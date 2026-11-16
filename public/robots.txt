@@ -1,11 +1,11 @@
 # Robots.txt for ZENSICK
-# https://zensick.com
+# https://www.zensick.in
 
 User-agent: *
 Allow: /
 
 # Host
-Host: https://zensick.com
+Host: https://www.zensick.in
 
 # Sitemap
-Sitemap: https://zensick.com/sitemap.xml
+Sitemap: https://www.zensick.in/sitemap.xml

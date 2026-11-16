@@ -45,7 +45,7 @@ const schema = [
     "@context": "https://schema.org",
     "@type": "AboutPage",
     "name": "About ZENSICK",
-    "url": "https://zensick.com/about",
+    "url": "https://www.zensick.in/about",
     "description": "Learn about ZENSICK, the strategy-first digital growth company in Delhi incubated under MHCIIE and Hansraj E-Cell."
   },
   {
@@ -56,13 +56,13 @@ const schema = [
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://zensick.com/"
+        "item": "https://www.zensick.in/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "About",
-        "item": "https://zensick.com/about"
+        "item": "https://www.zensick.in/about"
       }
     ]
   }
@@ -74,7 +74,7 @@ export default function About() {
       <SEO 
         title="About Us | Digital Growth Company in Delhi" 
         description="Learn about ZENSICK, the strategy-first digital growth company in Delhi. We focus on transparent tracking, data-driven decisions, and sustainable growth."
-        canonicalUrl="https://zensick.com/about"
+        canonicalUrl="https://www.zensick.in/about"
         keywords="about ZENSICK, digital growth agency Delhi, performance marketing team, Hansraj E-Cell, data-driven marketing agency"
         schema={schema}
       />

@@ -7,7 +7,7 @@ const termsSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "Terms of Service | ZENSICK",
-  "url": "https://zensick.com/terms-of-service",
+  "url": "https://www.zensick.in/terms-of-service",
   "description": "ZENSICK Terms of Service governing performance marketing and digital growth services."
 };
 
@@ -17,7 +17,7 @@ export default function TermsOfService() {
       <SEO 
         title="Terms of Service"
         description="Review the ZENSICK Terms of Service governing our performance marketing, analytics, creative, and digital growth services."
-        canonicalUrl="https://zensick.com/terms-of-service"
+        canonicalUrl="https://www.zensick.in/terms-of-service"
         schema={termsSchema}
       />
       <Navbar />

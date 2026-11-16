@@ -19,7 +19,7 @@ const NotFound = () => {
       <SEO 
         title="Page Not Found"
         description="The requested page could not be found on ZENSICK."
-        canonicalUrl="https://zensick.com/404"
+        canonicalUrl="https://www.zensick.in/404"
         noindex={true}
       />
       <Navbar />

@@ -252,7 +252,7 @@ export default function BlogPost() {
   }
 
   const Icon = post.icon;
-  const canonicalUrl = `https://zensick.com/blog/${slug}`;
+  const canonicalUrl = `https://www.zensick.in/blog/${slug}`;
 
   const articleSchema = [
     {
@@ -264,15 +264,15 @@ export default function BlogPost() {
       "author": {
         "@type": "Organization",
         "name": post.author,
-        "url": "https://zensick.com"
+        "url": "https://www.zensick.in"
       },
       "publisher": {
         "@type": "Organization",
         "name": "ZENSICK",
-        "url": "https://zensick.com",
+        "url": "https://www.zensick.in",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://zensick.com/favicon.png"
+          "url": "https://www.zensick.in/favicon.png"
         }
       },
       "datePublished": "2026-01-20",
@@ -289,13 +289,13 @@ export default function BlogPost() {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://zensick.com/"
+          "item": "https://www.zensick.in/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Blog",
-          "item": "https://zensick.com/blog"
+          "item": "https://www.zensick.in/blog"
         },
         {
           "@type": "ListItem",

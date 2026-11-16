@@ -103,7 +103,7 @@ const caseStudiesSchema = [
     "@type": "CollectionPage",
     "name": "D2C Case Studies & Growth Results | ZENSICK",
     "description": "Real case studies showing how ZENSICK scales D2C brands through performance marketing, attribution restructuring, and conversion optimization.",
-    "url": "https://zensick.com/case-studies"
+    "url": "https://www.zensick.in/case-studies"
   },
   {
     "@context": "https://schema.org",
@@ -113,13 +113,13 @@ const caseStudiesSchema = [
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://zensick.com/"
+        "item": "https://www.zensick.in/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Case Studies",
-        "item": "https://zensick.com/case-studies"
+        "item": "https://www.zensick.in/case-studies"
       }
     ]
   }
@@ -131,7 +131,7 @@ export default function CaseStudies() {
       <SEO 
         title="D2C Case Studies & Marketing Results | Proven Client Growth" 
         description="See how we've helped D2C brands scale from scratch, restructure analytics, and achieve profitable ROAS. Real case studies, real data, verifiable results."
-        canonicalUrl="https://zensick.com/case-studies"
+        canonicalUrl="https://www.zensick.in/case-studies"
         keywords="D2C case studies, performance marketing results, e-commerce growth case study, ROAS improvement, CAC reduction, StarrVault, Tanish Creation, Vyre"
         schema={caseStudiesSchema}
       />

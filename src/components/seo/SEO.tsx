@@ -16,7 +16,7 @@ export interface SEOProps {
   schema?: Record<string, any> | Record<string, any>[];
 }
 
-const DEFAULT_IMAGE = 'https://zensick.com/og-image.png';
+const DEFAULT_IMAGE = 'https://www.zensick.in/og-image.png';
 const DEFAULT_KEYWORDS = 'performance marketing, analytics, ROAS, D2C marketing, Meta ads, Google ads, revenue attribution, digital growth';
 
 export function SEO({

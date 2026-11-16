@@ -85,11 +85,11 @@ const analyticsSchema = [
     "provider": {
       "@type": "Organization",
       "name": "ZENSICK",
-      "url": "https://zensick.com"
+      "url": "https://www.zensick.in"
     },
     "serviceType": "Marketing Analytics & Attribution",
     "description": "Advanced GA4 architecture, Meta Pixel with CAPI, conversion tracking, custom Looker Studio dashboards, and full-funnel attribution.",
-    "url": "https://zensick.com/analytics"
+    "url": "https://www.zensick.in/analytics"
   },
   {
     "@context": "https://schema.org",
@@ -99,13 +99,13 @@ const analyticsSchema = [
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://zensick.com/"
+        "item": "https://www.zensick.in/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Analytics",
-        "item": "https://zensick.com/analytics"
+        "item": "https://www.zensick.in/analytics"
       }
     ]
   }
@@ -117,7 +117,7 @@ export default function Analytics() {
       <SEO 
         title="Analytics & Intelligence | Actionable Marketing Dashboards" 
         description="Every decision backed by data. Advanced GA4 architecture, Meta Pixel with CAPI, conversion tracking, and custom Looker Studio dashboards for true attribution."
-        canonicalUrl="https://zensick.com/analytics"
+        canonicalUrl="https://www.zensick.in/analytics"
         keywords="marketing analytics, GA4 setup, Meta CAPI, conversion tracking, Looker Studio dashboards, ROAS tracking, attribution modeling, CAC analysis"
         schema={analyticsSchema}
       />

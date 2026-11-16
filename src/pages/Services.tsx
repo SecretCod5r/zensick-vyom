@@ -143,10 +143,10 @@ const servicesSchema = [
     "provider": {
       "@type": "Organization",
       "name": "ZENSICK",
-      "url": "https://zensick.com"
+      "url": "https://www.zensick.in"
     },
     "description": "Integrated performance marketing, creative ad production, revenue attribution, CRM retention, and conversion-first web development.",
-    "url": "https://zensick.com/services",
+    "url": "https://www.zensick.in/services",
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Digital Growth Verticals",
@@ -168,13 +168,13 @@ const servicesSchema = [
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://zensick.com/"
+        "item": "https://www.zensick.in/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Services",
-        "item": "https://zensick.com/services"
+        "item": "https://www.zensick.in/services"
       }
     ]
   }
@@ -186,7 +186,7 @@ export default function Services() {
       <SEO
         title="Services | 360° Digital Growth & Performance Marketing"
         description="Strategy-first, analytics-driven digital growth. Marketing strategy, creative ad production, performance marketing, CRM retention, analytics, and web development."
-        canonicalUrl="https://zensick.com/services"
+        canonicalUrl="https://www.zensick.in/services"
         keywords="growth marketing services, performance marketing agency, Meta ads management, Google ads agency, D2C creative agency, marketing attribution, web development"
         schema={servicesSchema}
       />

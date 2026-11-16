@@ -7,7 +7,7 @@ const privacySchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "Privacy Policy | ZENSICK",
-  "url": "https://zensick.com/privacy-policy",
+  "url": "https://www.zensick.in/privacy-policy",
   "description": "ZENSICK's privacy policy outlining data collection, usage, and protection practices."
 };
 
@@ -17,7 +17,7 @@ export default function PrivacyPolicy() {
       <SEO 
         title="Privacy Policy"
         description="Read ZENSICK's Privacy Policy to understand how we collect, use, and protect your personal and business data across our website and marketing services."
-        canonicalUrl="https://zensick.com/privacy-policy"
+        canonicalUrl="https://www.zensick.in/privacy-policy"
         schema={privacySchema}
       />
       <Navbar />

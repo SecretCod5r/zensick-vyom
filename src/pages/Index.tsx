@@ -15,24 +15,24 @@ const homeSchema = [
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": "https://zensick.com/#website",
+    "@id": "https://www.zensick.in/#website",
     "name": "ZENSICK",
-    "url": "https://zensick.com/",
+    "url": "https://www.zensick.in/",
     "description": "Strategy-first, analytics-driven digital growth company scaling brands through integrated performance marketing and actionable intelligence.",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://zensick.com/blog?q={search_term_string}",
+      "target": "https://www.zensick.in/blog?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   },
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "@id": "https://zensick.com/#localbusiness",
+    "@id": "https://www.zensick.in/#localbusiness",
     "name": "ZENSICK",
-    "url": "https://zensick.com/",
-    "logo": "https://zensick.com/favicon.png",
-    "image": "https://zensick.com/og-image.png",
+    "url": "https://www.zensick.in/",
+    "logo": "https://www.zensick.in/favicon.png",
+    "image": "https://www.zensick.in/og-image.png",
     "priceRange": "$$$",
     "address": {
       "@type": "PostalAddress",
@@ -56,7 +56,7 @@ const Index = () => {
       <SEO 
         title="360° Digital Growth Company | Performance Marketing & Analytics" 
         description="We don't guess. We predict. ZENSICK is a strategy-first, analytics-driven digital growth company scaling D2C brands through performance marketing, attribution, and growth engineering."
-        canonicalUrl="https://zensick.com/"
+        canonicalUrl="https://www.zensick.in/"
         keywords="performance marketing, digital growth agency, analytics, ROAS optimization, D2C marketing, Meta ads, Google ads, revenue attribution, Delhi"
         schema={homeSchema}
       />
